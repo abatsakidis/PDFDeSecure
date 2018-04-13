@@ -1,0 +1,3031 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>PdfSharp.Charting</name>
+    </assembly>
+    <members>
+        <member name="T:PdfSharp.Charting.Legend">
+            <summary>
+            Represents a legend of a chart.
+            </summary>
+        </member>
+        <member name="T:PdfSharp.Charting.ChartObject">
+            <summary>
+            Base class for all chart classes.
+            </summary>
+        </member>
+        <member name="T:PdfSharp.Charting.DocumentObject">
+            <summary>
+            Base class for all chart classes.
+            </summary>
+        </member>
+        <member name="M:PdfSharp.Charting.DocumentObject.#ctor">
+            <summary>
+            Initializes a new instance of the DocumentObject class.
+            </summary>
+        </member>
+        <member name="M:PdfSharp.Charting.DocumentObject.#ctor(PdfSharp.Charting.DocumentObject)">
+            <summary>
+            Initializes a new instance of the DocumentObject class with the specified parent.
+            </summary>
+        </member>
+        <member name="M:PdfSharp.Charting.DocumentObject.Clone">
+            <summary>
+            Creates a deep copy of the DocumentObject. The parent of the new object is null.
+            </summary>
+        </member>
+        <member name="M:PdfSharp.Charting.DocumentObject.DeepCopy">
+            <summary>
+            Implements the deep copy of the object.
+            </summary>
+        </member>
+        <member name="F:PdfSharp.Charting.DocumentObject.parent">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:PdfSharp.Charting.DocumentObject.Parent">
+            <summary>
+            Gets the parent object.
+            </summary>
+        </member>
+        <member name="M:PdfSharp.Charting.ChartObject.#ctor">
+            <summary>
+            Initializes a new instance of the ChartObject class.
+            </summary>
+        </member>
+        <member name="M:PdfSharp.Charting.ChartObject.#ctor(PdfSharp.Charting.DocumentObject)">
+            <summary>
+            Initializes a new instance of the ChartObject class with the specified parent.
+            </summary>
+        </member>
+        <member name="M:PdfSharp.Charting.Legend.#ctor">
+            <summary>
+            Initializes a new instance of the Legend class.
+            </summary>
+        </member>
+        <member name="M:PdfSharp.Charting.Legend.#ctor(PdfSharp.Charting.DocumentObject)">
+            <summary>
+            Initializes a new instance of the Legend class with the specified parent.
+            </summary>
+        </member>
+        <member name="M:PdfSharp.Charting.Legend.Clone">
+            <summary>
+            Creates a deep copy of this object.
+            </summary>
+        </member>
+        <member name="M:PdfSharp.Charting.Legend.DeepCopy">
+            <summary>
+            Implements the deep copy of the object.
+            </summary>
+        </member>
+        <member name="P:PdfSharp.Charting.Legend.LineFormat">
+            <summary>
+            Gets the line format of the legend's border.
+            </summary>
+        </member>
+        <member name="P:PdfSharp.Charting.Legend.Font">
+            <summary>
+            Gets the font of the legend.
+            </summary>
+        </member>
+        <member name="P:PdfSharp.Charting.Legend.Docking">
+            <summary>
+            Gets or sets the docking type.
+            </summary>
+        </member>
+        <member name="T:PdfSharp.Charting.Font">
+            <summary>
+            Font represents the formatting of characters in a paragraph.
+            </summary>
+        </member>
+        <member name="M:PdfSharp.Charting.Font.#ctor">
+            <summary>
+            Initializes a new instance of the Font class that can be used as a template.
+            </summary>
+        </member>
+        <member name="M:PdfSharp.Charting.Font.#ctor(PdfSharp.Charting.DocumentObject)">
+            <summary>
+            Initializes a new instance of the Font class with the specified parent.
+            </summary>
+        </member>
+        <member name="M:PdfSharp.Charting.Font.#ctor(System.String,PdfSharp.Drawing.XUnit)">
+            <summary>
+            Initializes a new instance of the Font class with the specified name and size.
+            </summary>
+        </member>
+        <member name="M:PdfSharp.Charting.Font.Clone">
+            <summary>
+            Creates a copy of the Font.
+            </summary>
+        </member>
+        <member name="P:PdfSharp.Charting.Font.Name">
+            <summary>
+            Gets or sets the name of the font.
+            </summary>
+        </member>
+        <member name="P:PdfSharp.Charting.Font.Size">
+            <summary>
+            Gets or sets the size of the font.
+            </summary>
+        </member>
+        <member name="P:PdfSharp.Charting.Font.Bold">
+            <summary>
+            Gets or sets the bold property.
+            </summary>
+        </member>
+        <member name="P:PdfSharp.Charting.Font.Italic">
+            <summary>
+            Gets or sets the italic property.
+            </summary>
+        </member>
+        <member name="P:PdfSharp.Charting.Font.Underline">
+            <summary>
+            Gets or sets the underline property.
+            </summary>
+        </member>
+        <member name="P:PdfSharp.Charting.Font.Color">
+            <summary>
+            Gets or sets the color property.
+            </summary>
+        </member>
+        <member name="P:PdfSharp.Charting.Font.Superscript">
+            <summary>
+            Gets or sets the superscript property.
+            </summary>
+        </member>
+        <member name="P:PdfSharp.Charting.Font.Subscript">
+            <summary>
+            Gets or sets the subscript property.
+            </summary>
+        </member>
+        <member name="T:PdfSharp.Charting.FontProperties">
+            <summary>
+            Specifies the properties for the font.
+            FOR INTERNAL USE ONLY.
+            </summary>
+        </member>
+        <member name="T:PdfSharp.Charting.Axis">
+            <summary>
+            This class represents an axis in a chart.
+            </summary>
+        </member>
+        <member name="M:PdfSharp.Charting.Axis.#ctor(PdfSharp.Charting.DocumentObject)">
+            <summary>
+            Initializes a new instance of the Axis class with the specified parent.
+            </summary>
+        </member>
+        <member name="M:PdfSharp.Charting.Axis.Clone">
+            <summary>
+            Creates a deep copy of this object.
+            </summary>
+        </member>
+        <member name="M:PdfSharp.Charting.Axis.DeepCopy">
+            <summary>
+            Implements the deep copy of the object.
+            </summary>
+        </member>
+        <member name="P:PdfSharp.Charting.Axis.Title">
+            <summary>
+            Gets the title of the axis.
+            </summary>
+        </member>
+        <member name="P:PdfSharp.Charting.Axis.MinimumScale">
+            <summary>
+            Gets or sets the minimum value of the axis.
+            </summary>
+        </member>
+        <member name="P:PdfSharp.Charting.Axis.MaximumScale">
+            <summary>
+            Gets or sets the maximum value of the axis.
+            </summary>
+        </member>
+        <member name="P:PdfSharp.Charting.Axis.MajorTick">
+            <summary>
+            Gets or sets the interval of the primary tick.
+            </summary>
+        </member>
+        <member name="P:PdfSharp.Charting.Axis.MinorTick">
+            <summary>
+            Gets or sets the interval of the secondary tick.
+            </summary>
+        </member>
+        <member name="P:PdfSharp.Charting.Axis.MajorTickMark">
+            <summary>
+            Gets or sets the type of the primary tick mark.
+            </summary>
+        </member>
+        <member name="P:PdfSharp.Charting.Axis.MinorTickMark">
+            <summary>
+            Gets or sets the type of the secondary tick mark.
+            </summary>
+        </member>
+        <member name="P:PdfSharp.Charting.Axis.TickLabels">
+            <summary>
+            Gets the label of the primary tick.
+            </summary>
+        </member>
+        <member name="P:PdfSharp.Charting.Axis.LineFormat">
+            <summary>
+            Gets the format of the axis line.
+            </summary>
+        </member>
+        <member name="P:PdfSharp.Charting.Axis.MajorGridlines">
+            <summary>
+            Gets the primary gridline object.
+            </summary>
+        </member>
+        <member name="P:PdfSharp.Charting.Axis.MinorGridlines">
+            <summary>
+            Gets the secondary gridline object.
+            </summary>
+        </member>
+        <member name="P:PdfSharp.Charting.Axis.HasMajorGridlines">
+            <summary>
+            Gets or sets, whether the axis has a primary gridline object.
+            </summary>
+        </member>
+        <member name="P:PdfSharp.Charting.Axis.HasMinorGridlines">
+            <summary>
+            Gets or sets, whether the axis has a secondary gridline object.
+            </summary>
+        </member>
+        <member name="T:PdfSharp.Charting.Renderers.BarStackedPlotAreaRenderer">
+            <summary>
+            Represents a plot area renderer of stacked bars, i. e. all bars are drawn one on another.
+            </summary>
+        </member>
+        <member name="T:PdfSharp.Charting.Renderers.BarPlotAreaRenderer">
+            <summary>
+            Represents a plot area renderer for bars.
+            </summary>
+        </member>
+        <member name="T:PdfSharp.Charting.Renderers.PlotAreaRenderer">
+            <summary>
+            Base class for all plot area renderers.
+            </summary>
+        </member>
+        <member name="T:PdfSharp.Charting.Renderers.Renderer">
+            <summary>
+            Base class of all renderers.
+            </summary>
+        </member>
+        <member name="M:PdfSharp.Charting.Renderers.Renderer.#ctor(PdfSharp.Charting.Renderers.RendererParameters)">
+            <summary>
+            Initializes a new instance of the Renderer class with the specified renderer parameters.
+            </summary>
+        </member>
+        <member name="M:PdfSharp.Charting.Renderers.Renderer.Init">
+            <summary>
+            Derived renderer should return an initialized and renderer specific rendererInfo,
+            e. g. XAxisRenderer returns an new instance of AxisRendererInfo class.
+            </summary>
+        </member>
+        <member name="M:PdfSharp.Charting.Renderers.Renderer.Format">
+            <summary>
+            Layouts and calculates the space used by the renderer's drawing item.
+            </summary>
+        </member>
+        <member name="M:PdfSharp.Charting.Renderers.Renderer.Draw">
+            <summary>
+            Draws the item.
+            </summary>
+        </member>
+        <member name="F:PdfSharp.Charting.Renderers.Renderer.rendererParms">
+            <summary>
+            Holds all necessary rendering information.
+            </summary>
+        </member>
+        <member name="F:PdfSharp.Charting.Renderers.PlotAreaRenderer.DefaultLineWidth">
+            <summary>
+            Represents the default line width for the plot area's border.
+            </summary>
+        </member>
+        <member name="M:PdfSharp.Charting.Renderers.PlotAreaRenderer.#ctor(PdfSharp.Charting.Renderers.RendererParameters)">
+            <summary>
+            Initializes a new instance of the PlotAreaRenderer class with the specified renderer parameters.
+            </summary>
+        </member>
+        <member name="M:PdfSharp.Charting.Renderers.PlotAreaRenderer.Init">
+            <summary>
+            Returns an initialized PlotAreaRendererInfo.
+            </summary>
+        </member>
+        <member name="M:PdfSharp.Charting.Renderers.PlotAreaRenderer.InitLineFormat(PdfSharp.Charting.Renderers.PlotAreaRendererInfo)">
+            <summary>
+            Initializes the plot area's line format common to all derived plot area renderers.
+            If line format is given all uninitialized values will be set.
+            </summary>
+        </member>
+        <member name="M:PdfSharp.Charting.Renderers.PlotAreaRenderer.InitFillFormat(PdfSharp.Charting.Renderers.PlotAreaRendererInfo)">
+            <summary>
+            Initializes the plot area's fill format common to all derived plot area renderers.
+            If fill format is given all uninitialized values will be set.
+            </summary>
+        </member>
+        <member name="M:PdfSharp.Charting.Renderers.BarPlotAreaRenderer.#ctor(PdfSharp.Charting.Renderers.RendererParameters)">
+            <summary>
+            Initializes a new instance of the BarPlotAreaRenderer class with the
+            specified renderer parameters.
+            </summary>
+        </member>
+        <member name="M:PdfSharp.Charting.Renderers.BarPlotAreaRenderer.Format">
+            <summary>
+            Layouts and calculates the space for each bar.
+            </summary>
+        </member>
+        <member name="M:PdfSharp.Charting.Renderers.BarPlotAreaRenderer.Draw">
+            <summary>
+            Draws the content of the bar plot area.
+            </summary>
+        </member>
+        <member name="M:PdfSharp.Charting.Renderers.BarPlotAreaRenderer.CalcBars">
+            <summary>
+            Calculates the position, width and height of each bar of all series.
+            </summary>
+        </member>
+        <member name="M:PdfSharp.Charting.Renderers.BarPlotAreaRenderer.IsDataInside(System.Double,System.Double,System.Double)">
+            <summary>
+            If yValue is within the range from yMin to yMax returns true, otherwise false.
+            </summary>
+        </member>
+        <member name="M:PdfSharp.Charting.Renderers.BarStackedPlotAreaRenderer.#ctor(PdfSharp.Charting.Renderers.RendererParameters)">
+            <summary>
+            Initializes a new instance of the BarStackedPlotAreaRenderer class with the
+            specified renderer parameters.
+            </summary>
+        </member>
+        <member name="M:PdfSharp.Charting.Renderers.BarStackedPlotAreaRenderer.CalcBars">
+            <summary>
+            Calculates the position, width and height of each bar of all series.
+            </summary>
+        </member>
+        <member name="M:PdfSharp.Charting.Renderers.BarStackedPlotAreaRenderer.IsDataInside(System.Double,System.Double,System.Double)">
+            <summary>
+            If yValue is within the range from yMin to yMax returns true, otherwise false.
+            </summary>
+        </member>
+        <member name="T:PdfSharp.Charting.XSeriesElements">
+            <summary>
+            Represents the collection of the value in an XSeries.
+            </summary>
+        </member>
+        <member name="T:PdfSharp.Charting.DocumentObjectCollection">
+            <summary>
+            Base class of all collections.
+            </summary>
+        </member>
+        <member name="M:PdfSharp.Charting.DocumentObjectCollection.#ctor">
+            <summary>
+            Initializes a new instance of the DocumentObjectCollection class.
+            </summary>
+        </member>
+        <member name="M:PdfSharp.Charting.DocumentObjectCollection.#ctor(PdfSharp.Charting.DocumentObject)">
+            <summary>
+            Initializes a new instance of the DocumentObjectCollection class with the specified parent.
+            </summary>
+        </member>
+        <member name="M:PdfSharp.Charting.DocumentObjectCollection.Clone">
+            <summary>
+            Creates a deep copy of this object.
+            </summary>
+        </member>
+        <member name="M:PdfSharp.Charting.DocumentObjectCollection.DeepCopy">
+            <summary>
+            Implements the deep copy of the object.
+            </summary>
+        </member>
+        <member name="M:PdfSharp.Charting.DocumentObjectCollection.CopyTo(System.Array,System.Int32)">
+            <summary>
+            Copies the ArrayList or a portion of it to a one-dimensional array.
+            </summary>
+        </member>
+        <member name="M:PdfSharp.Charting.DocumentObjectCollection.Clear">
+            <summary>
+            Removes all elements from the collection.
+            </summary>
+        </member>
+        <member name="M:PdfSharp.Charting.DocumentObjectCollection.InsertObject(System.Int32,PdfSharp.Charting.DocumentObject)">
+            <summary>
+            Inserts an element into the collection at the specified position.
+            </summary>
+        </member>
+        <member name="M:PdfSharp.Charting.DocumentObjectCollection.IndexOf(PdfSharp.Charting.DocumentObject)">
+            <summary>
+            Searches for the specified object and returns the zero-based index of the first occurrence.
+            </summary>
+        </member>
+        <member name="M:PdfSharp.Charting.DocumentObjectCollection.RemoveObjectAt(System.Int32)">
+            <summary>
+            Removes the element at the specified index.
+            </summary>
+        </member>
+        <member name="M:PdfSharp.Charting.DocumentObjectCollection.Add(PdfSharp.Charting.DocumentObject)">
+            <summary>
+            Adds the specified document object to the collection.
+            </summary>
+        </member>
+        <member name="M:PdfSharp.Charting.DocumentObjectCollection.GetEnumerator">
+            <summary>
+            Returns an enumerator that iterates through a collection.
+            </summary>
+            <returns>
+            An <see cref="T:System.Collections.IEnumerator"/> object that can be used to iterate through the collection.
+            </returns>
+        </member>
+        <member name="P:PdfSharp.Charting.DocumentObjectCollection.Item(System.Int32)">
+            <summary>
+            Gets the element at the specified index.
+            </summary>
+        </member>
+        <member name="P:PdfSharp.Charting.DocumentObjectCollection.Count">
+            <summary>
+            Gets the number of elements actually contained in the collection.
+            </summary>
+        </member>
+        <member name="P:PdfSharp.Charting.DocumentObjectCollection.First">
+            <summary>
+            Gets the first value in the collection, if there is any, otherwise null.
+            </summary>
+        </member>
+        <member name="P:PdfSharp.Charting.DocumentObjectCollection.LastObject">
+            <summary>
+            Gets the last element or null, if no such element exists.
+            </summary>
+        </member>
+        <member name="M:PdfSharp.Charting.XSeriesElements.#ctor">
+            <summary>
+            Initializes a new instance of the XSeriesElements class.
+            </summary>
+        </member>
+        <member name="M:PdfSharp.Charting.XSeriesElements.Clone">
+            <summary>
+            Creates a deep copy of this object.
+            </summary>
+        </member>
+        <member name="M:PdfSharp.Charting.XSeriesElements.AddBlank">
+            <summary>
+            Adds a blank to the XSeries.
+            </summary>
+        </member>
+        <member name="M:PdfSharp.Charting.XSeriesElements.Add(System.String)">
+            <summary>
+            Adds a value to the XSeries.
+            </summary>
+        </member>
+        <member name="M:PdfSharp.Charting.XSeriesElements.Add(System.String[])">
+            <summary>
+            Adds an array of values to the XSeries.
+            </summary>
+        </member>
+        <member name="T:PdfSharp.Charting.Renderers.PieClosedPlotAreaRenderer">
+            <summary>
+            Represents a closed pie plot area renderer.
+            </summary>
+        </member>
+        <member name="T:PdfSharp.Charting.Renderers.PiePlotAreaRenderer">
+            <summary>
+            Represents the base for all pie plot area renderer.
+            </summary>
+        </member>
+        <member name="M:PdfSharp.Charting.Renderers.PiePlotAreaRenderer.#ctor(PdfSharp.Charting.Renderers.RendererParameters)">
+            <summary>
+            Initializes a new instance of the PiePlotAreaRenderer class
+            with the specified renderer parameters.
+            </summary>
+        </member>
+        <member name="M:PdfSharp.Charting.Renderers.PiePlotAreaRenderer.Format">
+            <summary>
+            Layouts and calculates the space used by the pie plot area.
+            </summary>
+        </member>
+        <member name="M:PdfSharp.Charting.Renderers.PiePlotAreaRenderer.Draw">
+            <summary>
+            Draws the content of the pie plot area.
+            </summary>
+        </member>
+        <member name="M:PdfSharp.Charting.Renderers.PiePlotAreaRenderer.CalcSectors">
+            <summary>
+            Calculates the specific positions for each sector.
+            </summary>
+        </member>
+        <member name="M:PdfSharp.Charting.Renderers.PieClosedPlotAreaRenderer.#ctor(PdfSharp.Charting.Renderers.RendererParameters)">
+            <summary>
+            Initializes a new instance of the PiePlotAreaRenderer class
+            with the specified renderer parameters.
+            </summary>
+        </member>
+        <member name="M:PdfSharp.Charting.Renderers.PieClosedPlotAreaRenderer.CalcSectors">
+            <summary>
+            Calculate angles for each sector.
+            </summary>
+        </member>
+        <member name="T:PdfSharp.Charting.TickLabels">
+            <summary>
+            Represents the format of the label of each value on the axis.
+            </summary>
+        </member>
+        <member name="M:PdfSharp.Charting.TickLabels.#ctor">
+            <summary>
+            Initializes a new instance of the TickLabels class.
+            </summary>
+        </member>
+        <member name="M:PdfSharp.Charting.TickLabels.#ctor(PdfSharp.Charting.DocumentObject)">
+            <summary>
+            Initializes a new instance of the TickLabels class with the specified parent.
+            </summary>
+        </member>
+        <member name="M:PdfSharp.Charting.TickLabels.Clone">
+            <summary>
+            Creates a deep copy of this object.
+            </summary>
+        </member>
+        <member name="M:PdfSharp.Charting.TickLabels.DeepCopy">
+            <summary>
+            Implements the deep copy of the object.
+            </summary>
+        </member>
+        <member name="P:PdfSharp.Charting.TickLabels.Format">
+            <summary>
+            Gets or sets the label's number format.
+            </summary>
+        </member>
+        <member name="P:PdfSharp.Charting.TickLabels.Font">
+            <summary>
+            Gets the font of the label.
+            </summary>
+        </member>
+        <member name="T:PdfSharp.Charting.Underline">
+            <summary>
+            Specifies the underline type for the font.
+            </summary>
+        </member>
+        <member name="F:PdfSharp.Charting.Underline.None">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:PdfSharp.Charting.Underline.Single">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:PdfSharp.Charting.Underline.Words">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:PdfSharp.Charting.Underline.Dotted">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:PdfSharp.Charting.Underline.Dash">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:PdfSharp.Charting.Underline.DotDash">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:PdfSharp.Charting.Underline.DotDotDash">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:PdfSharp.Charting.Renderers.XAxisRenderer">
+            <summary>
+            Represents the base class for all X axis renderer.
+            </summary>
+        </member>
+        <member name="T:PdfSharp.Charting.Renderers.AxisRenderer">
+            <summary>
+            Represents the base for all specialized axis renderer. Initialization common too all
+            axis renderer should come here.
+            </summary>
+        </member>
+        <member name="F:PdfSharp.Charting.Renderers.AxisRenderer.DefaultLineWidth">
+            <summary>
+            Default width for a variety of lines.
+            </summary>
+        </member>
+        <member name="F:PdfSharp.Charting.Renderers.AxisRenderer.DefaultGridLineWidth">
+            <summary>
+            Default width for a gridlines.
+            </summary>
+        </member>
+        <member name="F:PdfSharp.Charting.Renderers.AxisRenderer.DefaultMajorTickMarkLineWidth">
+            <summary>
+            Default width for major tick marks.
+            </summary>
+        </member>
+        <member name="F:PdfSharp.Charting.Renderers.AxisRenderer.DefaultMinorTickMarkLineWidth">
+            <summary>
+            Default width for minor tick marks.
+            </summary>
+        </member>
+        <member name="F:PdfSharp.Charting.Renderers.AxisRenderer.DefaultMajorTickMarkWidth">
+            <summary>
+            Default width of major tick marks.
+            </summary>
+        </member>
+        <member name="F:PdfSharp.Charting.Renderers.AxisRenderer.DefaultMinorTickMarkWidth">
+            <summary>
+            Default width of minor tick marks.
+            </summary>
+        </member>
+        <member name="F:PdfSharp.Charting.Renderers.AxisRenderer.SpaceBetweenLabelAndTickmark">
+            <summary>
+            Default width of space between label and tick mark.
+            </summary>
+        </member>
+        <member name="M:PdfSharp.Charting.Renderers.AxisRenderer.#ctor(PdfSharp.Charting.Renderers.RendererParameters)">
+            <summary>
+            Initializes a new instance of the AxisRenderer class with the specified renderer parameters.
+            </summary>
+        </member>
+        <member name="M:PdfSharp.Charting.Renderers.AxisRenderer.InitAxisTitle(PdfSharp.Charting.Renderers.AxisRendererInfo,PdfSharp.Drawing.XFont)">
+            <summary>
+            Initializes the axis title of the rendererInfo. All missing font attributes will be taken
+            from the specified defaultFont.
+            </summary>
+        </member>
+        <member name="M:PdfSharp.Charting.Renderers.AxisRenderer.InitTickLabels(PdfSharp.Charting.Renderers.AxisRendererInfo,PdfSharp.Drawing.XFont)">
+            <summary>
+            Initializes the tick labels of the rendererInfo. All missing font attributes will be taken
+            from the specified defaultFont.
+            </summary>
+        </member>
+        <member name="M:PdfSharp.Charting.Renderers.AxisRenderer.InitAxisLineFormat(PdfSharp.Charting.Renderers.AxisRendererInfo)">
+            <summary>
+            Initializes the line format of the rendererInfo.
+            </summary>
+        </member>
+        <member name="M:PdfSharp.Charting.Renderers.AxisRenderer.InitGridlines(PdfSharp.Charting.Renderers.AxisRendererInfo)">
+            <summary>
+            Initializes the gridlines of the rendererInfo.
+            </summary>
+        </member>
+        <member name="M:PdfSharp.Charting.Renderers.XAxisRenderer.#ctor(PdfSharp.Charting.Renderers.RendererParameters)">
+            <summary>
+            Initializes a new instance of the XAxisRenderer class with the specified renderer parameters.
+            </summary>
+        </member>
+        <member name="M:PdfSharp.Charting.Renderers.XAxisRenderer.GetDefaultTickLabelsFormat">
+            <summary>
+            Returns the default tick labels format string.
+            </summary>
+        </member>
+        <member name="T:PdfSharp.Charting.Renderers.RendererParameters">
+            <summary>
+            Represents the necessary data for chart rendering.
+            </summary>
+        </member>
+        <member name="M:PdfSharp.Charting.Renderers.RendererParameters.#ctor">
+            <summary>
+            Initializes a new instance of the RendererParameters class.
+            </summary>
+        </member>
+        <member name="M:PdfSharp.Charting.Renderers.RendererParameters.#ctor(PdfSharp.Drawing.XGraphics,System.Double,System.Double,System.Double,System.Double)">
+            <summary>
+            Initializes a new instance of the RendererParameters class with the specified graphics and
+            coordinates.
+            </summary>
+        </member>
+        <member name="M:PdfSharp.Charting.Renderers.RendererParameters.#ctor(PdfSharp.Drawing.XGraphics,PdfSharp.Drawing.XRect)">
+            <summary>
+            Initializes a new instance of the RendererParameters class with the specified graphics and
+            rectangle.
+            </summary>
+        </member>
+        <member name="P:PdfSharp.Charting.Renderers.RendererParameters.Graphics">
+            <summary>
+            Gets or sets the graphics object.
+            </summary>
+        </member>
+        <member name="P:PdfSharp.Charting.Renderers.RendererParameters.DrawingItem">
+            <summary>
+            Gets or sets the item to draw.
+            </summary>
+        </member>
+        <member name="P:PdfSharp.Charting.Renderers.RendererParameters.Box">
+            <summary>
+            Gets or sets the rectangle for the drawing item.
+            </summary>
+        </member>
+        <member name="P:PdfSharp.Charting.Renderers.RendererParameters.RendererInfo">
+            <summary>
+            Gets or sets the RendererInfo.
+            </summary>
+        </member>
+        <member name="T:PdfSharp.Charting.Renderers.MarkerRenderer">
+            <summary>
+            Represents a renderer for markers in line charts and legends.
+            </summary>
+        </member>
+        <member name="M:PdfSharp.Charting.Renderers.MarkerRenderer.Draw(PdfSharp.Drawing.XGraphics,PdfSharp.Drawing.XPoint,PdfSharp.Charting.Renderers.MarkerRendererInfo)">
+            <summary>
+            Draws the marker given through rendererInfo at the specified position. Position specifies
+            the center of the marker.
+            </summary>
+        </member>
+        <member name="T:PdfSharp.Charting.TickMarkType">
+            <summary>
+            Determines the position where the Tickmarks will be rendered.
+            </summary>
+        </member>
+        <member name="F:PdfSharp.Charting.TickMarkType.None">
+            <summary>
+            Tickmarks are not rendered.
+            </summary>
+        </member>
+        <member name="F:PdfSharp.Charting.TickMarkType.Inside">
+            <summary>
+            Tickmarks are rendered inside the plot area.
+            </summary>
+        </member>
+        <member name="F:PdfSharp.Charting.TickMarkType.Outside">
+            <summary>
+            Tickmarks are rendered outside the plot area.
+            </summary>
+        </member>
+        <member name="F:PdfSharp.Charting.TickMarkType.Cross">
+            <summary>
+            Tickmarks are rendered inside and outside the plot area.
+            </summary>
+        </member>
+        <member name="T:PdfSharp.Charting.Renderers.VerticalYAxisRenderer">
+            <summary>
+            Represents a Y axis renderer used for charts of type Column2D or Line.
+            </summary>
+        </member>
+        <member name="T:PdfSharp.Charting.Renderers.YAxisRenderer">
+            <summary>
+            Represents the base class for all Y axis renderer.
+            </summary>
+        </member>
+        <member name="M:PdfSharp.Charting.Renderers.YAxisRenderer.#ctor(PdfSharp.Charting.Renderers.RendererParameters)">
+            <summary>
+            Initializes a new instance of the YAxisRenderer class with the specified renderer parameters.
+            </summary>
+        </member>
+        <member name="M:PdfSharp.Charting.Renderers.YAxisRenderer.FineTuneYAxis(PdfSharp.Charting.Renderers.AxisRendererInfo,System.Double,System.Double)">
+            <summary>
+            Calculates optimal minimum/maximum scale and minor/major tick based on yMin and yMax.
+            </summary>
+        </member>
+        <member name="M:PdfSharp.Charting.Renderers.YAxisRenderer.GetDefaultTickLabelsFormat">
+            <summary>
+            Returns the default tick labels format string.
+            </summary>
+        </member>
+        <member name="M:PdfSharp.Charting.Renderers.VerticalYAxisRenderer.#ctor(PdfSharp.Charting.Renderers.RendererParameters)">
+            <summary>
+            Initializes a new instance of the VerticalYAxisRenderer class with the
+            specified renderer parameters.
+            </summary>
+        </member>
+        <member name="M:PdfSharp.Charting.Renderers.VerticalYAxisRenderer.Init">
+            <summary>
+            Returns a initialized rendererInfo based on the Y axis.
+            </summary>
+        </member>
+        <member name="M:PdfSharp.Charting.Renderers.VerticalYAxisRenderer.Format">
+            <summary>
+            Calculates the space used for the Y axis.
+            </summary>
+        </member>
+        <member name="M:PdfSharp.Charting.Renderers.VerticalYAxisRenderer.Draw">
+            <summary>
+            Draws the vertical Y axis.
+            </summary>
+        </member>
+        <member name="M:PdfSharp.Charting.Renderers.VerticalYAxisRenderer.InitScale(PdfSharp.Charting.Renderers.AxisRendererInfo)">
+            <summary>
+            Calculates all values necessary for scaling the axis like minimum/maximum scale or
+            minor/major tick.
+            </summary>
+        </member>
+        <member name="M:PdfSharp.Charting.Renderers.VerticalYAxisRenderer.GetTickMarkPos(PdfSharp.Charting.Renderers.AxisRendererInfo,System.Double@,System.Double@,System.Double@,System.Double@)">
+            <summary>
+            Gets the top and bottom position of the major and minor tick marks depending on the
+            tick mark type.
+            </summary>
+        </member>
+        <member name="M:PdfSharp.Charting.Renderers.VerticalYAxisRenderer.CalcYAxis(System.Double@,System.Double@)">
+            <summary>
+            Determines the smallest and the largest number from all series of the chart.
+            </summary>
+        </member>
+        <member name="T:PdfSharp.Charting.Renderers.AreaPlotAreaRenderer">
+            <summary>
+            Represents a plot area renderer of areas.
+            </summary>
+        </member>
+        <member name="T:PdfSharp.Charting.Renderers.ColumnLikePlotAreaRenderer">
+            <summary>
+            Base class for all plot area renderers.
+            </summary>
+        </member>
+        <member name="M:PdfSharp.Charting.Renderers.ColumnLikePlotAreaRenderer.#ctor(PdfSharp.Charting.Renderers.RendererParameters)">
+            <summary>
+            Initializes a new instance of the ColumnLikePlotAreaRenderer class with the
+            specified renderer parameters.
+            </summary>
+        </member>
+        <member name="M:PdfSharp.Charting.Renderers.ColumnLikePlotAreaRenderer.Format">
+            <summary>
+            Layouts and calculates the space for column like plot areas.
+            </summary>
+        </member>
+        <member name="M:PdfSharp.Charting.Renderers.AreaPlotAreaRenderer.#ctor(PdfSharp.Charting.Renderers.RendererParameters)">
+            <summary>
+            Initializes a new instance of the AreaPlotAreaRenderer class
+            with the specified renderer parameters.
+            </summary>
+        </member>
+        <member name="M:PdfSharp.Charting.Renderers.AreaPlotAreaRenderer.Draw">
+            <summary>
+            Draws the content of the area plot area.
+            </summary>
+        </member>
+        <member name="T:PdfSharp.Charting.Renderers.RendererInfo">
+            <summary>
+            Represents the base class of all renderer infos.
+            Renderer infos are used to hold all necessary information and time consuming calculations
+            between rendering cycles.
+            </summary>
+        </member>
+        <member name="T:PdfSharp.Charting.Renderers.AreaRendererInfo">
+            <summary>
+            Base class for all renderer infos which defines an area.
+            </summary>
+        </member>
+        <member name="P:PdfSharp.Charting.Renderers.AreaRendererInfo.X">
+            <summary>
+            Gets or sets the x coordinate of this rectangle.
+            </summary>
+        </member>
+        <member name="P:PdfSharp.Charting.Renderers.AreaRendererInfo.Y">
+            <summary>
+            Gets or sets the y coordinate of this rectangle.
+            </summary>
+        </member>
+        <member name="P:PdfSharp.Charting.Renderers.AreaRendererInfo.Width">
+            <summary>
+            Gets or sets the width of this rectangle.
+            </summary>
+        </member>
+        <member name="P:PdfSharp.Charting.Renderers.AreaRendererInfo.Height">
+            <summary>
+            Gets or sets the height of this rectangle.
+            </summary>
+        </member>
+        <member name="P:PdfSharp.Charting.Renderers.AreaRendererInfo.Size">
+            <summary>
+            Gets the area's size.
+            </summary>
+        </member>
+        <member name="P:PdfSharp.Charting.Renderers.AreaRendererInfo.Rect">
+            <summary>
+            Gets the area's rectangle.
+            </summary>
+        </member>
+        <member name="T:PdfSharp.Charting.Renderers.ChartRendererInfo">
+            <summary>
+            A ChartRendererInfo stores information of all main parts of a chart like axis renderer info or
+            plotarea renderer info.
+            </summary>
+        </member>
+        <member name="P:PdfSharp.Charting.Renderers.ChartRendererInfo.DefaultFont">
+            <summary>
+            Gets the chart's default font for rendering.
+            </summary>
+        </member>
+        <member name="P:PdfSharp.Charting.Renderers.ChartRendererInfo.DefaultDataLabelFont">
+            <summary>
+            Gets the chart's default font for rendering data labels.
+            </summary>
+        </member>
+        <member name="T:PdfSharp.Charting.Renderers.CombinationRendererInfo">
+            <summary>
+            A CombinationRendererInfo stores information for rendering combination of charts.
+            </summary>
+        </member>
+        <member name="T:PdfSharp.Charting.Renderers.PointRendererInfo">
+            <summary>
+            PointRendererInfo is used to render one single data point which is part of a data series.
+            </summary>
+        </member>
+        <member name="T:PdfSharp.Charting.Renderers.SectorRendererInfo">
+            <summary>
+            Represents one sector of a series used by a pie chart.
+            </summary>
+        </member>
+        <member name="T:PdfSharp.Charting.Renderers.ColumnRendererInfo">
+            <summary>
+            Represents one data point of a series and the corresponding rectangle.
+            </summary>
+        </member>
+        <member name="T:PdfSharp.Charting.Renderers.DataLabelEntryRendererInfo">
+            <summary>
+            Stores rendering specific information for one data label entry.
+            </summary>
+        </member>
+        <member name="T:PdfSharp.Charting.Renderers.DataLabelRendererInfo">
+            <summary>
+            Stores data label specific rendering information.
+            </summary>
+        </member>
+        <member name="T:PdfSharp.Charting.Renderers.SeriesRendererInfo">
+            <summary>
+            SeriesRendererInfo holds all data series specific rendering information.
+            </summary>
+        </member>
+        <member name="P:PdfSharp.Charting.Renderers.SeriesRendererInfo.SumOfPoints">
+            <summary>
+            Gets the sum of all points in PointRendererInfo.
+            </summary>
+        </member>
+        <member name="T:PdfSharp.Charting.Renderers.MarkerRendererInfo">
+            <summary>
+            Represents a description of a marker for a line chart.
+            </summary>
+        </member>
+        <member name="T:PdfSharp.Charting.Renderers.AxisRendererInfo">
+            <summary>
+            An AxisRendererInfo holds all axis specific rendering information.
+            </summary>
+        </member>
+        <member name="P:PdfSharp.Charting.Renderers.AxisRendererInfo.X">
+            <summary>
+            Sets the x coordinate of the inner rectangle.
+            </summary>
+        </member>
+        <member name="P:PdfSharp.Charting.Renderers.AxisRendererInfo.Y">
+            <summary>
+            Sets the y coordinate of the inner rectangle.
+            </summary>
+        </member>
+        <member name="P:PdfSharp.Charting.Renderers.AxisRendererInfo.Height">
+            <summary>
+            Sets the height of the inner rectangle.
+            </summary>
+        </member>
+        <member name="P:PdfSharp.Charting.Renderers.AxisRendererInfo.Width">
+            <summary>
+            Sets the width of the inner rectangle.
+            </summary>
+        </member>
+        <member name="T:PdfSharp.Charting.Renderers.LegendEntryRendererInfo">
+            <summary>
+            Represents one description of a legend entry.
+            </summary>
+        </member>
+        <member name="F:PdfSharp.Charting.Renderers.LegendEntryRendererInfo.MarkerSize">
+            <summary>
+            Size for the marker only.
+            </summary>
+        </member>
+        <member name="F:PdfSharp.Charting.Renderers.LegendEntryRendererInfo.MarkerArea">
+            <summary>
+            Width for marker area. Extra spacing for line charts are considered.
+            </summary>
+        </member>
+        <member name="F:PdfSharp.Charting.Renderers.LegendEntryRendererInfo.TextSize">
+            <summary>
+            Size for text area.
+            </summary>
+        </member>
+        <member name="T:PdfSharp.Charting.Renderers.LegendRendererInfo">
+            <summary>
+            Stores legend specific rendering information.
+            </summary>
+        </member>
+        <member name="T:PdfSharp.Charting.Renderers.PlotAreaRendererInfo">
+            <summary>
+            Stores rendering information common to all plot area renderers.
+            </summary>
+        </member>
+        <member name="F:PdfSharp.Charting.Renderers.PlotAreaRendererInfo.matrix">
+            <summary>
+            Saves the plot area's matrix.
+            </summary>
+        </member>
+        <member name="T:PdfSharp.Charting.Renderers.PlotAreaBorderRenderer">
+            <summary>
+            Represents the border renderer for plot areas.
+            </summary>
+        </member>
+        <member name="M:PdfSharp.Charting.Renderers.PlotAreaBorderRenderer.#ctor(PdfSharp.Charting.Renderers.RendererParameters)">
+            <summary>
+            Initializes a new instance of the PlotAreaBorderRenderer class with the specified
+            renderer parameters.
+            </summary>
+        </member>
+        <member name="M:PdfSharp.Charting.Renderers.PlotAreaBorderRenderer.Draw">
+            <summary>
+            Draws the border around the plot area.
+            </summary>
+        </member>
+        <member name="T:PdfSharp.Charting.Renderers.PieLegendRenderer">
+            <summary>
+            Represents the legend renderer specific to pie charts.
+            </summary>
+        </member>
+        <member name="T:PdfSharp.Charting.Renderers.LegendRenderer">
+            <summary>
+            Represents the legend renderer for all chart types.
+            </summary>
+        </member>
+        <member name="F:PdfSharp.Charting.Renderers.LegendRenderer.LeftPadding">
+            <summary>
+            Used to insert a padding on the left.
+            </summary>
+        </member>
+        <member name="F:PdfSharp.Charting.Renderers.LegendRenderer.RightPadding">
+            <summary>
+            Used to insert a padding on the right.
+            </summary>
+        </member>
+        <member name="F:PdfSharp.Charting.Renderers.LegendRenderer.TopPadding">
+            <summary>
+            Used to insert a padding at the top.
+            </summary>
+        </member>
+        <member name="F:PdfSharp.Charting.Renderers.LegendRenderer.BottomPadding">
+            <summary>
+            Used to insert a padding at the bottom.
+            </summary>
+        </member>
+        <member name="F:PdfSharp.Charting.Renderers.LegendRenderer.EntrySpacing">
+            <summary>
+            Used to insert a padding between entries.
+            </summary>
+        </member>
+        <member name="F:PdfSharp.Charting.Renderers.LegendRenderer.DefaultLineWidth">
+            <summary>
+            Default line width used for the legend's border.
+            </summary>
+        </member>
+        <member name="M:PdfSharp.Charting.Renderers.LegendRenderer.#ctor(PdfSharp.Charting.Renderers.RendererParameters)">
+            <summary>
+            Initializes a new instance of the LegendRenderer class with the specified renderer parameters.
+            </summary>
+        </member>
+        <member name="M:PdfSharp.Charting.Renderers.LegendRenderer.Format">
+            <summary>
+            Layouts and calculates the space used by the legend.
+            </summary>
+        </member>
+        <member name="M:PdfSharp.Charting.Renderers.LegendRenderer.Draw">
+            <summary>
+            Draws the legend.
+            </summary>
+        </member>
+        <member name="M:PdfSharp.Charting.Renderers.PieLegendRenderer.#ctor(PdfSharp.Charting.Renderers.RendererParameters)">
+            <summary>
+            Initializes a new instance of the PieLegendRenderer class with the specified renderer
+            parameters.
+            </summary>
+        </member>
+        <member name="M:PdfSharp.Charting.Renderers.PieLegendRenderer.Init">
+            <summary>
+            Initializes the legend's renderer info. Each data point will be represented through
+            a legend entry renderer info.
+            </summary>
+        </member>
+        <member name="T:PdfSharp.Charting.Renderers.LinePlotAreaRenderer">
+            <summary>
+            Renders the plot area used by line charts. 
+            </summary>
+        </member>
+        <member name="M:PdfSharp.Charting.Renderers.LinePlotAreaRenderer.#ctor(PdfSharp.Charting.Renderers.RendererParameters)">
+            <summary>
+            Initializes a new instance of the LinePlotAreaRenderer class with the
+            specified renderer parameters.
+            </summary>
+        </member>
+        <member name="M:PdfSharp.Charting.Renderers.LinePlotAreaRenderer.Draw">
+            <summary>
+            Draws the content of the line plot area.
+            </summary>
+        </member>
+        <member name="M:PdfSharp.Charting.Renderers.LinePlotAreaRenderer.DrawMarker(PdfSharp.Drawing.XGraphics,PdfSharp.Drawing.XPoint[],PdfSharp.Charting.Renderers.SeriesRendererInfo)">
+            <summary>
+            Draws all markers given in rendererInfo at the positions specified by points.
+            </summary>
+        </member>
+        <member name="T:PdfSharp.Charting.Renderers.LineChartRenderer">
+            <summary>
+            Represents a line chart renderer.
+            </summary>
+        </member>
+        <member name="T:PdfSharp.Charting.Renderers.ColumnLikeChartRenderer">
+            <summary>
+            Represents column like chart renderer.
+            </summary>
+        </member>
+        <member name="T:PdfSharp.Charting.Renderers.ChartRenderer">
+            <summary>
+            Represents the base class for all chart renderers.
+            </summary>
+        </member>
+        <member name="F:PdfSharp.Charting.Renderers.ChartRenderer.LegendSpacing">
+            <summary>
+            Used to separate the legend from the plot area.
+            </summary>
+        </member>
+        <member name="M:PdfSharp.Charting.Renderers.ChartRenderer.#ctor(PdfSharp.Charting.Renderers.RendererParameters)">
+            <summary>
+            Initializes a new instance of the ChartRenderer class with the specified renderer parameters.
+            </summary>
+        </member>
+        <member name="M:PdfSharp.Charting.Renderers.ChartRenderer.LayoutLegend">
+            <summary>
+            Calculates the space used by the legend and returns the remaining space available for the
+            other parts of the chart.
+            </summary>
+        </member>
+        <member name="F:PdfSharp.Charting.Renderers.ChartRenderer.DefaultSeriesLineWidth">
+            <summary>
+            Represents the default width for all series lines, like borders in column/bar charts.
+            </summary>
+        </member>
+        <member name="M:PdfSharp.Charting.Renderers.ColumnLikeChartRenderer.#ctor(PdfSharp.Charting.Renderers.RendererParameters)">
+            <summary>
+            Initializes a new instance of the ColumnLikeChartRenderer class with the
+            specified renderer parameters.
+            </summary>
+        </member>
+        <member name="M:PdfSharp.Charting.Renderers.ColumnLikeChartRenderer.CalcLayout">
+            <summary>
+            Calculates the chart layout.
+            </summary>
+        </member>
+        <member name="M:PdfSharp.Charting.Renderers.LineChartRenderer.#ctor(PdfSharp.Charting.Renderers.RendererParameters)">
+            <summary>
+            Initializes a new instance of the LineChartRenderer class with the specified renderer parameters.
+            </summary>
+        </member>
+        <member name="M:PdfSharp.Charting.Renderers.LineChartRenderer.Init">
+            <summary>
+            Returns an initialized and renderer specific rendererInfo.
+            </summary>
+        </member>
+        <member name="M:PdfSharp.Charting.Renderers.LineChartRenderer.Format">
+            <summary>
+            Layouts and calculates the space used by the line chart.
+            </summary>
+        </member>
+        <member name="M:PdfSharp.Charting.Renderers.LineChartRenderer.Draw">
+            <summary>
+            Draws the line chart.
+            </summary>
+        </member>
+        <member name="M:PdfSharp.Charting.Renderers.LineChartRenderer.InitSeriesRendererInfo">
+            <summary>
+            Initializes all necessary data to draw a series for a line chart.
+            </summary>
+        </member>
+        <member name="M:PdfSharp.Charting.Renderers.LineChartRenderer.InitSeries">
+            <summary>
+            Initializes all necessary data to draw a series for a line chart.
+            </summary>
+        </member>
+        <member name="T:PdfSharp.Charting.Renderers.LegendEntryRenderer">
+            <summary>
+            Represents the renderer for a legend entry.
+            </summary>
+        </member>
+        <member name="F:PdfSharp.Charting.Renderers.LegendEntryRenderer.MarkerWidth">
+            <summary>
+            Absolute width for markers (including line) in point.
+            </summary>
+        </member>
+        <member name="F:PdfSharp.Charting.Renderers.LegendEntryRenderer.MaxLegendMarkerWidth">
+            <summary>
+            Maximum legend marker width in point.
+            </summary>
+        </member>
+        <member name="F:PdfSharp.Charting.Renderers.LegendEntryRenderer.MaxLegendMarkerHeight">
+            <summary>
+            Maximum legend marker height in point.
+            </summary>
+        </member>
+        <member name="F:PdfSharp.Charting.Renderers.LegendEntryRenderer.SpacingBetweenMarkerAndText">
+            <summary>
+            Insert spacing between marker and text in point.
+            </summary>
+        </member>
+        <member name="M:PdfSharp.Charting.Renderers.LegendEntryRenderer.#ctor(PdfSharp.Charting.Renderers.RendererParameters)">
+            <summary>
+            Initializes a new instance of the LegendEntryRenderer class with the specified renderer
+            parameters.
+            </summary>
+        </member>
+        <member name="M:PdfSharp.Charting.Renderers.LegendEntryRenderer.Format">
+            <summary>
+            Calculates the space used by the legend entry.
+            </summary>
+        </member>
+        <member name="M:PdfSharp.Charting.Renderers.LegendEntryRenderer.Draw">
+            <summary>
+            Draws one legend entry.
+            </summary>
+        </member>
+        <member name="T:PdfSharp.Charting.Renderers.ColumnClusteredPlotAreaRenderer">
+            <summary>
+            Represents a plot area renderer of clustered columns, i. e. all columns are drawn side by side.
+            </summary>
+        </member>
+        <member name="T:PdfSharp.Charting.Renderers.ColumnPlotAreaRenderer">
+            <summary>
+            Represents a plot area renderer of clustered columns, i. e. all columns are drawn side by side.
+            </summary>
+        </member>
+        <member name="M:PdfSharp.Charting.Renderers.ColumnPlotAreaRenderer.#ctor(PdfSharp.Charting.Renderers.RendererParameters)">
+            <summary>
+            Initializes a new instance of the ColumnPlotAreaRenderer class with the
+            specified renderer parameters.
+            </summary>
+        </member>
+        <member name="M:PdfSharp.Charting.Renderers.ColumnPlotAreaRenderer.Format">
+            <summary>
+            Layouts and calculates the space for each column.
+            </summary>
+        </member>
+        <member name="M:PdfSharp.Charting.Renderers.ColumnPlotAreaRenderer.Draw">
+            <summary>
+            Draws the content of the column plot area.
+            </summary>
+        </member>
+        <member name="M:PdfSharp.Charting.Renderers.ColumnPlotAreaRenderer.CalcColumns">
+            <summary>
+            Calculates the position, width and height of each column of all series.
+            </summary>
+        </member>
+        <member name="M:PdfSharp.Charting.Renderers.ColumnPlotAreaRenderer.IsDataInside(System.Double,System.Double,System.Double)">
+            <summary>
+            If yValue is within the range from yMin to yMax returns true, otherwise false.
+            </summary>
+        </member>
+        <member name="M:PdfSharp.Charting.Renderers.ColumnClusteredPlotAreaRenderer.#ctor(PdfSharp.Charting.Renderers.RendererParameters)">
+            <summary>
+            Initializes a new instance of the ColumnClusteredPlotAreaRenderer class with the
+            specified renderer parameters.
+            </summary>
+        </member>
+        <member name="M:PdfSharp.Charting.Renderers.ColumnClusteredPlotAreaRenderer.CalcColumns">
+            <summary>
+            Calculates the position, width and height of each column of all series.
+            </summary>
+        </member>
+        <member name="M:PdfSharp.Charting.Renderers.ColumnClusteredPlotAreaRenderer.IsDataInside(System.Double,System.Double,System.Double)">
+            <summary>
+            If yValue is within the range from yMin to yMax returns true, otherwise false.
+            </summary>
+        </member>
+        <member name="T:PdfSharp.Charting.Renderers.BarClusteredLegendRenderer">
+            <summary>
+            Represents the legend renderer specific to bar charts.
+            </summary>
+        </member>
+        <member name="T:PdfSharp.Charting.Renderers.ColumnLikeLegendRenderer">
+            <summary>
+            Represents the legend renderer specific to charts like column, line, or bar.
+            </summary>
+        </member>
+        <member name="M:PdfSharp.Charting.Renderers.ColumnLikeLegendRenderer.#ctor(PdfSharp.Charting.Renderers.RendererParameters)">
+            <summary>
+            Initializes a new instance of the ColumnLikeLegendRenderer class with the
+            specified renderer parameters.
+            </summary>
+        </member>
+        <member name="M:PdfSharp.Charting.Renderers.ColumnLikeLegendRenderer.Init">
+            <summary>
+            Initializes the legend's renderer info. Each data series will be represented through
+            a legend entry renderer info.
+            </summary>
+        </member>
+        <member name="M:PdfSharp.Charting.Renderers.BarClusteredLegendRenderer.#ctor(PdfSharp.Charting.Renderers.RendererParameters)">
+            <summary>
+            Initializes a new instance of the BarClusteredLegendRenderer class with the
+            specified renderer parameters.
+            </summary>
+        </member>
+        <member name="M:PdfSharp.Charting.Renderers.BarClusteredLegendRenderer.Draw">
+            <summary>
+            Draws the legend.
+            </summary>
+        </member>
+        <member name="T:PdfSharp.Charting.Renderers.BarChartRenderer">
+            <summary>
+            Represents a bar chart renderer.
+            </summary>
+        </member>
+        <member name="M:PdfSharp.Charting.Renderers.BarChartRenderer.#ctor(PdfSharp.Charting.Renderers.RendererParameters)">
+            <summary>
+            Initializes a new instance of the BarChartRenderer class with the
+            specified renderer parameters.
+            </summary>
+        </member>
+        <member name="M:PdfSharp.Charting.Renderers.BarChartRenderer.Init">
+            <summary>
+            Returns an initialized and renderer specific rendererInfo.
+            </summary>
+        </member>
+        <member name="M:PdfSharp.Charting.Renderers.BarChartRenderer.Format">
+            <summary>
+            Layouts and calculates the space used by the column chart.
+            </summary>
+        </member>
+        <member name="M:PdfSharp.Charting.Renderers.BarChartRenderer.Draw">
+            <summary>
+            Draws the column chart.
+            </summary>
+        </member>
+        <member name="M:PdfSharp.Charting.Renderers.BarChartRenderer.GetPlotAreaRenderer">
+            <summary>
+            Returns the specific plot area renderer.
+            </summary>
+        </member>
+        <member name="M:PdfSharp.Charting.Renderers.BarChartRenderer.GetLegendRenderer">
+            <summary>
+            Returns the specific legend renderer.
+            </summary>
+        </member>
+        <member name="M:PdfSharp.Charting.Renderers.BarChartRenderer.GetYAxisRenderer">
+            <summary>
+            Returns the specific plot area renderer.
+            </summary>
+        </member>
+        <member name="M:PdfSharp.Charting.Renderers.BarChartRenderer.InitSeriesRendererInfo">
+            <summary>
+            Initializes all necessary data to draw all series for a column chart.
+            </summary>
+        </member>
+        <member name="M:PdfSharp.Charting.Renderers.BarChartRenderer.InitSeries">
+            <summary>
+            Initializes all necessary data to draw all series for a column chart.
+            </summary>
+        </member>
+        <member name="T:PdfSharp.Charting.XValues">
+            <summary>
+            Represents the collection of values on the X-Axis.
+            </summary>
+        </member>
+        <member name="M:PdfSharp.Charting.XValues.#ctor">
+            <summary>
+            Initializes a new instance of the XValues class.
+            </summary>
+        </member>
+        <member name="M:PdfSharp.Charting.XValues.#ctor(PdfSharp.Charting.DocumentObject)">
+            <summary>
+            Initializes a new instance of the XValues class with the specified parent.
+            </summary>
+        </member>
+        <member name="M:PdfSharp.Charting.XValues.Clone">
+            <summary>
+            Creates a deep copy of this object.
+            </summary>
+        </member>
+        <member name="M:PdfSharp.Charting.XValues.AddXSeries">
+            <summary>
+            Adds a new XSeries to the collection.
+            </summary>
+        </member>
+        <member name="P:PdfSharp.Charting.XValues.Item(System.Int32)">
+            <summary>
+            Gets an XSeries by its index.
+            </summary>
+        </member>
+        <member name="T:PdfSharp.Charting.XSeries">
+            <summary>
+            Represents a series of data on the X-Axis.
+            </summary>
+        </member>
+        <member name="M:PdfSharp.Charting.XSeries.#ctor">
+            <summary>
+            Initializes a new instance of the XSeries class.
+            </summary>
+        </member>
+        <member name="F:PdfSharp.Charting.XSeries.xSeriesElements">
+            <summary>
+            The actual value container of the XSeries.
+            </summary>
+        </member>
+        <member name="M:PdfSharp.Charting.XSeries.Clone">
+            <summary>
+            Creates a deep copy of this object.
+            </summary>
+        </member>
+        <member name="M:PdfSharp.Charting.XSeries.DeepCopy">
+            <summary>
+            Implements the deep copy of the object.
+            </summary>
+        </member>
+        <member name="M:PdfSharp.Charting.XSeries.AddBlank">
+            <summary>
+            Adds a blank to the XSeries.
+            </summary>
+        </member>
+        <member name="M:PdfSharp.Charting.XSeries.Add(System.String)">
+            <summary>
+            Adds a value to the XSeries.
+            </summary>
+        </member>
+        <member name="M:PdfSharp.Charting.XSeries.Add(System.String[])">
+            <summary>
+            Adds an array of values to the XSeries.
+            </summary>
+        </member>
+        <member name="M:PdfSharp.Charting.XSeries.GetEnumerator">
+            <summary>
+            Gets the enumerator.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:PdfSharp.Charting.XSeries.Item(System.Int32)">
+            <summary>
+            Gets the xvalue at the specified index.
+            </summary>
+        </member>
+        <member name="P:PdfSharp.Charting.XSeries.Count">
+            <summary>
+            Gets the number of xvalues actually contained in the xseries.
+            </summary>
+        </member>
+        <member name="T:PdfSharp.Charting.SeriesCollection">
+            <summary>
+            The collection of data series.
+            </summary>
+        </member>
+        <member name="M:PdfSharp.Charting.SeriesCollection.#ctor">
+            <summary>
+            Initializes a new instance of the SeriesCollection class.
+            </summary>
+        </member>
+        <member name="M:PdfSharp.Charting.SeriesCollection.#ctor(PdfSharp.Charting.DocumentObject)">
+            <summary>
+            Initializes a new instance of the SeriesCollection class with the specified parent.
+            </summary>
+        </member>
+        <member name="M:PdfSharp.Charting.SeriesCollection.Clone">
+            <summary>
+            Creates a deep copy of this object.
+            </summary>
+        </member>
+        <member name="M:PdfSharp.Charting.SeriesCollection.AddSeries">
+            <summary>
+            Adds a new series to the collection.
+            </summary>
+        </member>
+        <member name="P:PdfSharp.Charting.SeriesCollection.Item(System.Int32)">
+            <summary>
+            Gets a series by it's index.
+            </summary>
+        </member>
+        <member name="T:PdfSharp.Charting.Gridlines">
+            <summary>
+            Represents the gridlines on the axes.
+            </summary>
+        </member>
+        <member name="M:PdfSharp.Charting.Gridlines.#ctor">
+            <summary>
+            Initializes a new instance of the Gridlines class.
+            </summary>
+        </member>
+        <member name="M:PdfSharp.Charting.Gridlines.#ctor(PdfSharp.Charting.DocumentObject)">
+            <summary>
+            Initializes a new instance of the Gridlines class with the specified parent.
+            </summary>
+        </member>
+        <member name="M:PdfSharp.Charting.Gridlines.Clone">
+            <summary>
+            Creates a deep copy of this object.
+            </summary>
+        </member>
+        <member name="M:PdfSharp.Charting.Gridlines.DeepCopy">
+            <summary>
+            Implements the deep copy of the object.
+            </summary>
+        </member>
+        <member name="P:PdfSharp.Charting.Gridlines.LineFormat">
+            <summary>
+            Gets the line format of the grid.
+            </summary>
+        </member>
+        <member name="T:PdfSharp.Charting.Renderers.CombinationChartRenderer">
+            <summary>
+            Represents a renderer for combinations of charts.
+            </summary>
+        </member>
+        <member name="M:PdfSharp.Charting.Renderers.CombinationChartRenderer.#ctor(PdfSharp.Charting.Renderers.RendererParameters)">
+            <summary>
+            Initializes a new instance of the CombinationChartRenderer class with the
+            specified renderer parameters.
+            </summary>
+        </member>
+        <member name="M:PdfSharp.Charting.Renderers.CombinationChartRenderer.Init">
+            <summary>
+            Returns an initialized and renderer specific rendererInfo.
+            </summary>
+        </member>
+        <member name="M:PdfSharp.Charting.Renderers.CombinationChartRenderer.Format">
+            <summary>
+            Layouts and calculates the space used by the combination chart.
+            </summary>
+        </member>
+        <member name="M:PdfSharp.Charting.Renderers.CombinationChartRenderer.Draw">
+            <summary>
+            Draws the column chart.
+            </summary>
+        </member>
+        <member name="M:PdfSharp.Charting.Renderers.CombinationChartRenderer.InitSeriesRendererInfo">
+            <summary>
+            Initializes all necessary data to draw series for a combination chart.
+            </summary>
+        </member>
+        <member name="M:PdfSharp.Charting.Renderers.CombinationChartRenderer.DistributeSeries">
+            <summary>
+            Sort all series renderer info dependent on their chart type.
+            </summary>
+        </member>
+        <member name="T:PdfSharp.Charting.Renderers.AreaChartRenderer">
+            <summary>
+            Represents an area chart renderer.
+            </summary>
+        </member>
+        <member name="M:PdfSharp.Charting.Renderers.AreaChartRenderer.#ctor(PdfSharp.Charting.Renderers.RendererParameters)">
+            <summary>
+            Initializes a new instance of the AreaChartRenderer class with the
+            specified renderer parameters.
+            </summary>
+        </member>
+        <member name="M:PdfSharp.Charting.Renderers.AreaChartRenderer.Init">
+            <summary>
+            Returns an initialized and renderer specific rendererInfo.
+            </summary>
+        </member>
+        <member name="M:PdfSharp.Charting.Renderers.AreaChartRenderer.Format">
+            <summary>
+            Layouts and calculates the space used by the line chart.
+            </summary>
+        </member>
+        <member name="M:PdfSharp.Charting.Renderers.AreaChartRenderer.Draw">
+            <summary>
+            Draws the column chart.
+            </summary>
+        </member>
+        <member name="M:PdfSharp.Charting.Renderers.AreaChartRenderer.InitSeriesRendererInfo">
+            <summary>
+            Initializes all necessary data to draw a series for a area chart.
+            </summary>
+        </member>
+        <member name="M:PdfSharp.Charting.Renderers.AreaChartRenderer.InitSeries">
+            <summary>
+            Initializes all necessary data to draw a series for a area chart.
+            </summary>
+        </member>
+        <member name="T:PdfSharp.Charting.XValue">
+            <summary>
+            Represents the actual value on the XSeries.
+            </summary>
+        </member>
+        <member name="M:PdfSharp.Charting.XValue.#ctor">
+            <summary>
+            Initializes a new instance of the XValue class.
+            </summary>
+        </member>
+        <member name="M:PdfSharp.Charting.XValue.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the XValue class with the specified value.
+            </summary>
+        </member>
+        <member name="F:PdfSharp.Charting.XValue.Value">
+            <summary>
+            The actual value of the XValue.
+            </summary>
+        </member>
+        <member name="M:PdfSharp.Charting.XValue.Clone">
+            <summary>
+            Creates a deep copy of this object.
+            </summary>
+        </member>
+        <member name="T:PdfSharp.Charting.Series">
+            <summary>
+            Represents a series of data on the chart.
+            </summary>
+        </member>
+        <member name="M:PdfSharp.Charting.Series.#ctor">
+            <summary>
+            Initializes a new instance of the Series class.
+            </summary>
+        </member>
+        <member name="M:PdfSharp.Charting.Series.Clone">
+            <summary>
+            Creates a deep copy of this object.
+            </summary>
+        </member>
+        <member name="M:PdfSharp.Charting.Series.DeepCopy">
+            <summary>
+            Implements the deep copy of the object.
+            </summary>
+        </member>
+        <member name="M:PdfSharp.Charting.Series.AddBlank">
+            <summary>
+            Adds a blank to the series.
+            </summary>
+        </member>
+        <member name="M:PdfSharp.Charting.Series.Add(System.Double)">
+            <summary>
+            Adds a real value to the series.
+            </summary>
+        </member>
+        <member name="M:PdfSharp.Charting.Series.Add(System.Double[])">
+            <summary>
+            Adds an array of real values to the series.
+            </summary>
+        </member>
+        <member name="P:PdfSharp.Charting.Series.Elements">
+            <summary>
+            The actual value container of the series.
+            </summary>
+        </member>
+        <member name="P:PdfSharp.Charting.Series.Name">
+            <summary>
+            Gets or sets the name of the series which will be used in the legend.
+            </summary>
+        </member>
+        <member name="P:PdfSharp.Charting.Series.LineFormat">
+            <summary>
+            Gets the line format of the border of each data.
+            </summary>
+        </member>
+        <member name="P:PdfSharp.Charting.Series.FillFormat">
+            <summary>
+            Gets the background filling of the data.
+            </summary>
+        </member>
+        <member name="P:PdfSharp.Charting.Series.MarkerSize">
+            <summary>
+            Gets or sets the size of the marker in a line chart.
+            </summary>
+        </member>
+        <member name="P:PdfSharp.Charting.Series.MarkerStyle">
+            <summary>
+            Gets or sets the style of the marker in a line chart.
+            </summary>
+        </member>
+        <member name="P:PdfSharp.Charting.Series.MarkerForegroundColor">
+            <summary>
+            Gets or sets the foreground color of the marker in a line chart.
+            </summary>
+        </member>
+        <member name="P:PdfSharp.Charting.Series.MarkerBackgroundColor">
+            <summary>
+            Gets or sets the background color of the marker in a line chart.
+            </summary>
+        </member>
+        <member name="P:PdfSharp.Charting.Series.ChartType">
+            <summary>
+            Gets or sets the chart type of the series if it's intended to be different than the
+            global chart type.
+            </summary>
+        </member>
+        <member name="P:PdfSharp.Charting.Series.DataLabel">
+            <summary>
+            Gets the DataLabel of the series.
+            </summary>
+        </member>
+        <member name="P:PdfSharp.Charting.Series.HasDataLabel">
+            <summary>
+            Gets or sets whether the series has a DataLabel.
+            </summary>
+        </member>
+        <member name="P:PdfSharp.Charting.Series.Count">
+            <summary>
+            Gets the element count of the series.
+            </summary>
+        </member>
+        <member name="T:PdfSharp.Charting.PlotArea">
+            <summary>
+            Represents the area where the actual chart is drawn.
+            </summary>
+        </member>
+        <member name="M:PdfSharp.Charting.PlotArea.#ctor">
+            <summary>
+            Initializes a new instance of the PlotArea class.
+            </summary>
+        </member>
+        <member name="M:PdfSharp.Charting.PlotArea.#ctor(PdfSharp.Charting.DocumentObject)">
+            <summary>
+            Initializes a new instance of the PlotArea class with the specified parent.
+            </summary>
+        </member>
+        <member name="M:PdfSharp.Charting.PlotArea.Clone">
+            <summary>
+            Creates a deep copy of this object.
+            </summary>
+        </member>
+        <member name="M:PdfSharp.Charting.PlotArea.DeepCopy">
+            <summary>
+            Implements the deep copy of the object.
+            </summary>
+        </member>
+        <member name="P:PdfSharp.Charting.PlotArea.LineFormat">
+            <summary>
+            Gets the line format of the plot area's border.
+            </summary>
+        </member>
+        <member name="P:PdfSharp.Charting.PlotArea.FillFormat">
+            <summary>
+            Gets the background filling of the plot area.
+            </summary>
+        </member>
+        <member name="P:PdfSharp.Charting.PlotArea.LeftPadding">
+            <summary>
+            Gets or sets the left padding of the area.
+            </summary>
+        </member>
+        <member name="P:PdfSharp.Charting.PlotArea.RightPadding">
+            <summary>
+            Gets or sets the right padding of the area.
+            </summary>
+        </member>
+        <member name="P:PdfSharp.Charting.PlotArea.TopPadding">
+            <summary>
+            Gets or sets the top padding of the area.
+            </summary>
+        </member>
+        <member name="P:PdfSharp.Charting.PlotArea.BottomPadding">
+            <summary>
+            Gets or sets the bottom padding of the area.
+            </summary>
+        </member>
+        <member name="T:PdfSharp.Charting.AxisTitle">
+            <summary>
+            Represents the title of an axis.
+            </summary>
+        </member>
+        <member name="M:PdfSharp.Charting.AxisTitle.#ctor">
+            <summary>
+            Initializes a new instance of the AxisTitle class.
+            </summary>
+        </member>
+        <member name="M:PdfSharp.Charting.AxisTitle.#ctor(PdfSharp.Charting.DocumentObject)">
+            <summary>
+            Initializes a new instance of the AxisTitle class with the specified parent.
+            </summary>
+        </member>
+        <member name="M:PdfSharp.Charting.AxisTitle.Clone">
+            <summary>
+            Creates a deep copy of this object.
+            </summary>
+        </member>
+        <member name="M:PdfSharp.Charting.AxisTitle.DeepCopy">
+            <summary>
+            Implements the deep copy of the object.
+            </summary>
+        </member>
+        <member name="P:PdfSharp.Charting.AxisTitle.Caption">
+            <summary>
+            Gets or sets the caption of the title.
+            </summary>
+        </member>
+        <member name="P:PdfSharp.Charting.AxisTitle.Font">
+            <summary>
+            Gets the font of the title.
+            </summary>
+        </member>
+        <member name="P:PdfSharp.Charting.AxisTitle.Orientation">
+            <summary>
+            Gets or sets the orientation of the caption.
+            </summary>
+        </member>
+        <member name="P:PdfSharp.Charting.AxisTitle.Alignment">
+            <summary>
+            Gets or sets the horizontal alignment of the caption.
+            </summary>
+        </member>
+        <member name="P:PdfSharp.Charting.AxisTitle.VerticalAlignment">
+            <summary>
+            Gets or sets the vertical alignment of the caption.
+            </summary>
+        </member>
+        <member name="T:PdfSharp.Charting.Renderers.PieChartRenderer">
+            <summary>
+            Represents a pie chart renderer.
+            </summary>
+        </member>
+        <member name="M:PdfSharp.Charting.Renderers.PieChartRenderer.#ctor(PdfSharp.Charting.Renderers.RendererParameters)">
+            <summary>
+            Initializes a new instance of the PieChartRenderer class with the
+            specified renderer parameters.
+            </summary>
+        </member>
+        <member name="M:PdfSharp.Charting.Renderers.PieChartRenderer.Init">
+            <summary>
+            Returns an initialized and renderer specific rendererInfo.
+            </summary>
+        </member>
+        <member name="M:PdfSharp.Charting.Renderers.PieChartRenderer.Format">
+            <summary>
+            Layouts and calculates the space used by the pie chart.
+            </summary>
+        </member>
+        <member name="M:PdfSharp.Charting.Renderers.PieChartRenderer.Draw">
+            <summary>
+            Draws the pie chart.
+            </summary>
+        </member>
+        <member name="M:PdfSharp.Charting.Renderers.PieChartRenderer.GetPlotAreaRenderer">
+            <summary>
+            Returns the specific plot area renderer.
+            </summary>
+        </member>
+        <member name="M:PdfSharp.Charting.Renderers.PieChartRenderer.InitSeries(PdfSharp.Charting.Renderers.ChartRendererInfo)">
+            <summary>
+            Initializes all necessary data to draw a series for a pie chart.
+            </summary>
+        </member>
+        <member name="T:PdfSharp.Charting.Renderers.HorizontalXAxisRenderer">
+            <summary>
+            Represents an axis renderer used for charts of type Column2D or Line.
+            </summary>
+        </member>
+        <member name="M:PdfSharp.Charting.Renderers.HorizontalXAxisRenderer.#ctor(PdfSharp.Charting.Renderers.RendererParameters)">
+            <summary>
+            Initializes a new instance of the HorizontalXAxisRenderer class with the specified renderer parameters.
+            </summary>
+        </member>
+        <member name="M:PdfSharp.Charting.Renderers.HorizontalXAxisRenderer.Init">
+            <summary>
+            Returns an initialized rendererInfo based on the X axis.
+            </summary>
+        </member>
+        <member name="M:PdfSharp.Charting.Renderers.HorizontalXAxisRenderer.Format">
+            <summary>
+            Calculates the space used for the X axis.
+            </summary>
+        </member>
+        <member name="M:PdfSharp.Charting.Renderers.HorizontalXAxisRenderer.Draw">
+            <summary>
+            Draws the horizontal X axis.
+            </summary>
+        </member>
+        <member name="M:PdfSharp.Charting.Renderers.HorizontalXAxisRenderer.CalculateXAxisValues(PdfSharp.Charting.Renderers.AxisRendererInfo)">
+            <summary>
+            Calculates the X axis describing values like minimum/maximum scale, major/minor tick and
+            major/minor tick mark width.
+            </summary>
+        </member>
+        <member name="M:PdfSharp.Charting.Renderers.HorizontalXAxisRenderer.InitXValues(PdfSharp.Charting.Renderers.AxisRendererInfo)">
+            <summary>
+            Initializes the rendererInfo's xvalues. If not set by the user xvalues will be simply numbers
+            from minimum scale + 1 to maximum scale.
+            </summary>
+        </member>
+        <member name="M:PdfSharp.Charting.Renderers.HorizontalXAxisRenderer.GetTickMarkPos(PdfSharp.Charting.Renderers.AxisRendererInfo,System.Double@,System.Double@,System.Double@,System.Double@)">
+            <summary>
+            Calculates the starting and ending y position for the minor and major tick marks.
+            </summary>
+        </member>
+        <member name="T:PdfSharp.Charting.MarkerStyle">
+            <summary>
+            Symbols of a data point in a line chart.
+            </summary>
+        </member>
+        <member name="F:PdfSharp.Charting.MarkerStyle.None">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:PdfSharp.Charting.MarkerStyle.Circle">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:PdfSharp.Charting.MarkerStyle.Dash">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:PdfSharp.Charting.MarkerStyle.Diamond">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:PdfSharp.Charting.MarkerStyle.Dot">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:PdfSharp.Charting.MarkerStyle.Plus">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:PdfSharp.Charting.MarkerStyle.Square">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:PdfSharp.Charting.MarkerStyle.Star">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:PdfSharp.Charting.MarkerStyle.Triangle">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:PdfSharp.Charting.MarkerStyle.X">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:PdfSharp.Charting.DockingType">
+            <summary>
+            Specifies the legend's position inside the chart.
+            </summary>
+        </member>
+        <member name="F:PdfSharp.Charting.DockingType.Top">
+            <summary>
+            Above the chart.
+            </summary>
+        </member>
+        <member name="F:PdfSharp.Charting.DockingType.Bottom">
+            <summary>
+            Below the chart.
+            </summary>
+        </member>
+        <member name="F:PdfSharp.Charting.DockingType.Left">
+            <summary>
+            Left from the chart.
+            </summary>
+        </member>
+        <member name="F:PdfSharp.Charting.DockingType.Right">
+            <summary>
+            Right from the chart.
+            </summary>
+        </member>
+        <member name="T:PdfSharp.Charting.FillFormat">
+            <summary>
+            Defines the background filling of the shape.
+            </summary>
+        </member>
+        <member name="M:PdfSharp.Charting.FillFormat.#ctor">
+            <summary>
+            Initializes a new instance of the FillFormat class.
+            </summary>
+        </member>
+        <member name="M:PdfSharp.Charting.FillFormat.#ctor(PdfSharp.Charting.DocumentObject)">
+            <summary>
+            Initializes a new instance of the FillFormat class with the specified parent.
+            </summary>
+        </member>
+        <member name="M:PdfSharp.Charting.FillFormat.Clone">
+            <summary>
+            Creates a deep copy of this object.
+            </summary>
+        </member>
+        <member name="P:PdfSharp.Charting.FillFormat.Color">
+            <summary>
+            Gets or sets the color of the filling.
+            </summary>
+        </member>
+        <member name="P:PdfSharp.Charting.FillFormat.Visible">
+            <summary>
+            Gets or sets a value indicating whether the background color should be visible.
+            </summary>
+        </member>
+        <member name="T:PdfSharp.Charting.Renderers.LineFormatRenderer">
+            <summary>
+            Represents a renderer specialized to draw lines in various styles, colors and widths.
+            </summary>
+        </member>
+        <member name="M:PdfSharp.Charting.Renderers.LineFormatRenderer.#ctor(PdfSharp.Drawing.XGraphics,PdfSharp.Charting.LineFormat,System.Double)">
+            <summary>
+            Initializes a new instance of the LineFormatRenderer class with the specified graphics, line format
+            and default width.
+            </summary>
+        </member>
+        <member name="M:PdfSharp.Charting.Renderers.LineFormatRenderer.#ctor(PdfSharp.Drawing.XGraphics,PdfSharp.Charting.LineFormat)">
+            <summary>
+            Initializes a new instance of the LineFormatRenderer class with the specified graphics and
+            line format.
+            </summary>
+        </member>
+        <member name="M:PdfSharp.Charting.Renderers.LineFormatRenderer.#ctor(PdfSharp.Drawing.XGraphics,PdfSharp.Drawing.XPen)">
+            <summary>
+            Initializes a new instance of the LineFormatRenderer class with the specified graphics and pen.
+            </summary>
+        </member>
+        <member name="M:PdfSharp.Charting.Renderers.LineFormatRenderer.DrawLine(PdfSharp.Drawing.XPoint,PdfSharp.Drawing.XPoint)">
+            <summary>
+            Draws a line from point pt0 to point pt1.
+            </summary>
+        </member>
+        <member name="M:PdfSharp.Charting.Renderers.LineFormatRenderer.DrawRectangle(PdfSharp.Drawing.XRect)">
+            <summary>
+            Draws a line specified by rect.
+            </summary>
+        </member>
+        <member name="M:PdfSharp.Charting.Renderers.LineFormatRenderer.DrawPath(PdfSharp.Drawing.XGraphicsPath)">
+            <summary>
+            Draws a line specified by path.
+            </summary>
+        </member>
+        <member name="F:PdfSharp.Charting.Renderers.LineFormatRenderer.gfx">
+            <summary>
+            Surface to draw the line.
+            </summary>
+        </member>
+        <member name="F:PdfSharp.Charting.Renderers.LineFormatRenderer.pen">
+            <summary>
+            Pen used to draw the line.
+            </summary>
+        </member>
+        <member name="T:PdfSharp.Charting.Renderers.ColumnStackedPlotAreaRenderer">
+            <summary>
+            Represents a plot area renderer of stacked columns, i. e. all columns are drawn one on another.
+            </summary>
+        </member>
+        <member name="M:PdfSharp.Charting.Renderers.ColumnStackedPlotAreaRenderer.#ctor(PdfSharp.Charting.Renderers.RendererParameters)">
+            <summary>
+            Initializes a new instance of the ColumnStackedPlotAreaRenderer class with the
+            specified renderer parameters.
+            </summary>
+        </member>
+        <member name="M:PdfSharp.Charting.Renderers.ColumnStackedPlotAreaRenderer.CalcColumns">
+            <summary>
+            Calculates the position, width and height of each column of all series.
+            </summary>
+        </member>
+        <member name="M:PdfSharp.Charting.Renderers.ColumnStackedPlotAreaRenderer.IsDataInside(System.Double,System.Double,System.Double)">
+            <summary>
+            Stacked columns are always inside.
+            </summary>
+        </member>
+        <member name="T:PdfSharp.Charting.Renderers.GridlinesRenderer">
+            <summary>
+            Base class for all renderers used to draw gridlines.
+            </summary>
+        </member>
+        <member name="M:PdfSharp.Charting.Renderers.GridlinesRenderer.#ctor(PdfSharp.Charting.Renderers.RendererParameters)">
+            <summary>
+            Initializes a new instance of the GridlinesRenderer class with the specified renderer parameters.
+            </summary>
+        </member>
+        <member name="T:PdfSharp.Charting.DataLabelType">
+            <summary>
+            Determines the type of the data label.
+            </summary>
+        </member>
+        <member name="F:PdfSharp.Charting.DataLabelType.None">
+            <summary>
+            No DataLabel.
+            </summary>
+        </member>
+        <member name="F:PdfSharp.Charting.DataLabelType.Percent">
+            <summary>
+            Percentage of the data. For pie charts only.
+            </summary>
+        </member>
+        <member name="F:PdfSharp.Charting.DataLabelType.Value">
+            <summary>
+            Value of the data.
+            </summary>
+        </member>
+        <member name="T:PdfSharp.Charting.Chart">
+            <summary>
+            Represents charts with different types.
+            </summary>
+        </member>
+        <member name="M:PdfSharp.Charting.Chart.#ctor">
+            <summary>
+            Initializes a new instance of the Chart class.
+            </summary>
+        </member>
+        <member name="M:PdfSharp.Charting.Chart.#ctor(PdfSharp.Charting.DocumentObject)">
+            <summary>
+            Initializes a new instance of the Chart class with the specified parent.
+            </summary>
+        </member>
+        <member name="M:PdfSharp.Charting.Chart.#ctor(PdfSharp.Charting.ChartType)">
+            <summary>
+            Initializes a new instance of the Chart class with the specified chart type.
+            </summary>
+        </member>
+        <member name="M:PdfSharp.Charting.Chart.Clone">
+            <summary>
+            Creates a deep copy of this object.
+            </summary>
+        </member>
+        <member name="M:PdfSharp.Charting.Chart.DeepCopy">
+            <summary>
+            Implements the deep copy of the object.
+            </summary>
+        </member>
+        <member name="M:PdfSharp.Charting.Chart.CheckAxis(PdfSharp.Charting.Axis)">
+            <summary>
+            Determines the type of the given axis.
+            </summary>
+        </member>
+        <member name="P:PdfSharp.Charting.Chart.Type">
+            <summary>
+            Gets or sets the base type of the chart.
+            ChartType of the series can be overwritten.
+            </summary>
+        </member>
+        <member name="P:PdfSharp.Charting.Chart.Font">
+            <summary>
+            Gets or sets the font for the chart. This will be the default font for all objects which are
+            part of the chart.
+            </summary>
+        </member>
+        <member name="P:PdfSharp.Charting.Chart.Legend">
+            <summary>
+            Gets the legend of the chart.
+            </summary>
+        </member>
+        <member name="P:PdfSharp.Charting.Chart.XAxis">
+            <summary>
+            Gets the X-Axis of the Chart.
+            </summary>
+        </member>
+        <member name="P:PdfSharp.Charting.Chart.YAxis">
+            <summary>
+            Gets the Y-Axis of the Chart.
+            </summary>
+        </member>
+        <member name="P:PdfSharp.Charting.Chart.ZAxis">
+            <summary>
+            Gets the Z-Axis of the Chart.
+            </summary>
+        </member>
+        <member name="P:PdfSharp.Charting.Chart.SeriesCollection">
+            <summary>
+            Gets the collection of the data series.
+            </summary>
+        </member>
+        <member name="P:PdfSharp.Charting.Chart.XValues">
+            <summary>
+            Gets the collection of the values written on the X-Axis.
+            </summary>
+        </member>
+        <member name="P:PdfSharp.Charting.Chart.PlotArea">
+            <summary>
+            Gets the plot (drawing) area of the chart.
+            </summary>
+        </member>
+        <member name="P:PdfSharp.Charting.Chart.DisplayBlanksAs">
+            <summary>
+            Gets or sets a value defining how blanks in the data series should be shown.
+            </summary>
+        </member>
+        <member name="P:PdfSharp.Charting.Chart.DataLabel">
+            <summary>
+            Gets the DataLabel of the chart.
+            </summary>
+        </member>
+        <member name="P:PdfSharp.Charting.Chart.HasDataLabel">
+            <summary>
+            Gets or sets whether the chart has a DataLabel.
+            </summary>
+        </member>
+        <member name="T:PdfSharp.Charting.Renderers.WallRenderer">
+            <summary>
+            Represents a renderer for the plot area background.
+            </summary>
+        </member>
+        <member name="M:PdfSharp.Charting.Renderers.WallRenderer.#ctor(PdfSharp.Charting.Renderers.RendererParameters)">
+            <summary>
+            Initializes a new instance of the WallRenderer class with the specified renderer parameters.
+            </summary>
+        </member>
+        <member name="M:PdfSharp.Charting.Renderers.WallRenderer.Draw">
+            <summary>
+            Draws the wall.
+            </summary>
+        </member>
+        <member name="T:PdfSharp.Charting.Renderers.VerticalStackedYAxisRenderer">
+            <summary>
+            Represents a Y axis renderer used for charts of type Column2D or Line.
+            </summary>
+        </member>
+        <member name="M:PdfSharp.Charting.Renderers.VerticalStackedYAxisRenderer.#ctor(PdfSharp.Charting.Renderers.RendererParameters)">
+            <summary>
+            Initializes a new instance of the VerticalYAxisRenderer class with the
+            specified renderer parameters.
+            </summary>
+        </member>
+        <member name="M:PdfSharp.Charting.Renderers.VerticalStackedYAxisRenderer.CalcYAxis(System.Double@,System.Double@)">
+            <summary>
+            Determines the sum of the smallest and the largest stacked column
+            from all series of the chart.
+            </summary>
+        </member>
+        <member name="T:PdfSharp.Charting.Renderers.HorizontalYAxisRenderer">
+            <summary>
+            Represents a Y axis renderer used for charts of type Bar2D.
+            </summary>
+        </member>
+        <member name="M:PdfSharp.Charting.Renderers.HorizontalYAxisRenderer.#ctor(PdfSharp.Charting.Renderers.RendererParameters)">
+            <summary>
+            Initializes a new instance of the HorizontalYAxisRenderer class with the
+            specified renderer parameters.
+            </summary>
+        </member>
+        <member name="M:PdfSharp.Charting.Renderers.HorizontalYAxisRenderer.Init">
+            <summary>
+            Returns a initialized rendererInfo based on the Y axis.
+            </summary>
+        </member>
+        <member name="M:PdfSharp.Charting.Renderers.HorizontalYAxisRenderer.Format">
+            <summary>
+            Calculates the space used for the Y axis.
+            </summary>
+        </member>
+        <member name="M:PdfSharp.Charting.Renderers.HorizontalYAxisRenderer.Draw">
+            <summary>
+            Draws the vertical Y axis.
+            </summary>
+        </member>
+        <member name="M:PdfSharp.Charting.Renderers.HorizontalYAxisRenderer.InitScale(PdfSharp.Charting.Renderers.AxisRendererInfo)">
+            <summary>
+            Calculates all values necessary for scaling the axis like minimum/maximum scale or
+            minor/major tick.
+            </summary>
+        </member>
+        <member name="M:PdfSharp.Charting.Renderers.HorizontalYAxisRenderer.GetTickMarkPos(PdfSharp.Charting.Renderers.AxisRendererInfo,System.Double@,System.Double@,System.Double@,System.Double@)">
+            <summary>
+            Gets the top and bottom position of the major and minor tick marks depending on the
+            tick mark type.
+            </summary>
+        </member>
+        <member name="M:PdfSharp.Charting.Renderers.HorizontalYAxisRenderer.CalcYAxis(System.Double@,System.Double@)">
+            <summary>
+            Determines the smallest and the largest number from all series of the chart.
+            </summary>
+        </member>
+        <member name="T:PdfSharp.Charting.Renderers.ColumnLikeGridlinesRenderer">
+            <summary>
+            Represents gridlines used by column or line charts, i. e. X axis grid will be rendered
+            from top to bottom and Y axis grid will be rendered from left to right of the plot area.
+            </summary>
+        </member>
+        <member name="M:PdfSharp.Charting.Renderers.ColumnLikeGridlinesRenderer.#ctor(PdfSharp.Charting.Renderers.RendererParameters)">
+            <summary>
+            Initializes a new instance of the ColumnLikeGridlinesRenderer class with the
+            specified renderer parameters.
+            </summary>
+        </member>
+        <member name="M:PdfSharp.Charting.Renderers.ColumnLikeGridlinesRenderer.Draw">
+            <summary>
+            Draws the gridlines into the plot area.
+            </summary>
+        </member>
+        <member name="T:PdfSharp.Charting.Renderers.ColumnChartRenderer">
+            <summary>
+            Represents a column chart renderer.
+            </summary>
+        </member>
+        <member name="M:PdfSharp.Charting.Renderers.ColumnChartRenderer.#ctor(PdfSharp.Charting.Renderers.RendererParameters)">
+            <summary>
+            Initializes a new instance of the ColumnChartRenderer class with the
+            specified renderer parameters.
+            </summary>
+        </member>
+        <member name="M:PdfSharp.Charting.Renderers.ColumnChartRenderer.Init">
+            <summary>
+            Returns an initialized and renderer specific rendererInfo.
+            </summary>
+        </member>
+        <member name="M:PdfSharp.Charting.Renderers.ColumnChartRenderer.Format">
+            <summary>
+            Layouts and calculates the space used by the column chart.
+            </summary>
+        </member>
+        <member name="M:PdfSharp.Charting.Renderers.ColumnChartRenderer.Draw">
+            <summary>
+            Draws the column chart.
+            </summary>
+        </member>
+        <member name="M:PdfSharp.Charting.Renderers.ColumnChartRenderer.GetPlotAreaRenderer">
+            <summary>
+            Returns the specific plot area renderer.
+            </summary>
+        </member>
+        <member name="M:PdfSharp.Charting.Renderers.ColumnChartRenderer.GetYAxisRenderer">
+            <summary>
+            Returns the specific y axis renderer.
+            </summary>
+        </member>
+        <member name="M:PdfSharp.Charting.Renderers.ColumnChartRenderer.InitSeriesRendererInfo">
+            <summary>
+            Initializes all necessary data to draw all series for a column chart.
+            </summary>
+        </member>
+        <member name="M:PdfSharp.Charting.Renderers.ColumnChartRenderer.InitSeries">
+            <summary>
+            Initializes all necessary data to draw all series for a column chart.
+            </summary>
+        </member>
+        <member name="T:PdfSharp.Charting.Renderers.ColumnColors">
+            <summary>
+            Represents the predefined column/bar chart colors.
+            </summary>
+        </member>
+        <member name="M:PdfSharp.Charting.Renderers.ColumnColors.Item(System.Int32)">
+            <summary>
+            Gets the color for column/bar charts from the specified index.
+            </summary>
+        </member>
+        <member name="F:PdfSharp.Charting.Renderers.ColumnColors.seriesColors">
+            <summary>
+            Colors for column/bar charts taken from Excel.
+            </summary>
+        </member>
+        <member name="T:PdfSharp.Charting.Renderers.LineColors">
+            <summary>
+            Represents the predefined line chart colors.
+            </summary>
+        </member>
+        <member name="M:PdfSharp.Charting.Renderers.LineColors.Item(System.Int32)">
+            <summary>
+            Gets the color for line charts from the specified index.
+            </summary>
+        </member>
+        <member name="F:PdfSharp.Charting.Renderers.LineColors.lineColors">
+            <summary>
+            Colors for line charts taken from Excel.
+            </summary>
+        </member>
+        <member name="T:PdfSharp.Charting.Renderers.PieColors">
+            <summary>
+            Represents the predefined pie chart colors.
+            </summary>
+        </member>
+        <member name="M:PdfSharp.Charting.Renderers.PieColors.Item(System.Int32)">
+            <summary>
+            Gets the color for pie charts from the specified index.
+            </summary>
+        </member>
+        <member name="F:PdfSharp.Charting.Renderers.PieColors.sectorColors">
+            <summary>
+            Colors for pie charts taken from Excel.
+            </summary>
+        </member>
+        <member name="T:PdfSharp.Charting.Renderers.BarClusteredPlotAreaRenderer">
+            <summary>
+            Represents a plot area renderer of clustered bars, i. e. all bars are drawn side by side.
+            </summary>
+        </member>
+        <member name="M:PdfSharp.Charting.Renderers.BarClusteredPlotAreaRenderer.#ctor(PdfSharp.Charting.Renderers.RendererParameters)">
+            <summary>
+            Initializes a new instance of the BarClusteredPlotAreaRenderer class with the
+            specified renderer parameters.
+            </summary>
+        </member>
+        <member name="M:PdfSharp.Charting.Renderers.BarClusteredPlotAreaRenderer.CalcBars">
+            <summary>
+            Calculates the position, width and height of each bar of all series.
+            </summary>
+        </member>
+        <member name="M:PdfSharp.Charting.Renderers.BarClusteredPlotAreaRenderer.IsDataInside(System.Double,System.Double,System.Double)">
+            <summary>
+            If yValue is within the range from yMin to yMax returns true, otherwise false.
+            </summary>
+        </member>
+        <member name="T:PdfSharp.Charting.ChartType">
+            <summary>
+            Specifies with type of chart will be drawn.
+            </summary>
+        </member>
+        <member name="F:PdfSharp.Charting.ChartType.Line">
+            <summary>
+            A line chart.
+            </summary>
+        </member>
+        <member name="F:PdfSharp.Charting.ChartType.Column2D">
+            <summary>
+            A clustered 2d column chart.
+            </summary>
+        </member>
+        <member name="F:PdfSharp.Charting.ChartType.ColumnStacked2D">
+            <summary>
+            A stacked 2d column chart.
+            </summary>
+        </member>
+        <member name="F:PdfSharp.Charting.ChartType.Area2D">
+            <summary>
+            A 2d area chart.
+            </summary>
+        </member>
+        <member name="F:PdfSharp.Charting.ChartType.Bar2D">
+            <summary>
+            A clustered 2d bar chart.
+            </summary>
+        </member>
+        <member name="F:PdfSharp.Charting.ChartType.BarStacked2D">
+            <summary>
+            A stacked 2d bar chart.
+            </summary>
+        </member>
+        <member name="F:PdfSharp.Charting.ChartType.Pie2D">
+            <summary>
+            A 2d pie chart.
+            </summary>
+        </member>
+        <member name="F:PdfSharp.Charting.ChartType.PieExploded2D">
+            <summary>
+            An exploded 2d pie chart.
+            </summary>
+        </member>
+        <member name="T:PdfSharp.Charting.BlankType">
+            <summary>
+            Determines how null values will be handled in a chart.
+            </summary>
+        </member>
+        <member name="F:PdfSharp.Charting.BlankType.NotPlotted">
+            <summary>
+            Null value is not plotted.
+            </summary>
+        </member>
+        <member name="F:PdfSharp.Charting.BlankType.Interpolated">
+            <summary>
+            Null value will be interpolated.
+            </summary>
+        </member>
+        <member name="F:PdfSharp.Charting.BlankType.Zero">
+            <summary>
+            Null value will be handled as zero.
+            </summary>
+        </member>
+        <member name="T:PdfSharp.Charting.DataLabel">
+            <summary>
+            Represents a DataLabel of a Series
+            </summary>
+        </member>
+        <member name="M:PdfSharp.Charting.DataLabel.#ctor">
+            <summary>
+            Initializes a new instance of the DataLabel class.
+            </summary>
+        </member>
+        <member name="M:PdfSharp.Charting.DataLabel.#ctor(PdfSharp.Charting.DocumentObject)">
+            <summary>
+            Initializes a new instance of the DataLabel class with the specified parent.
+            </summary>
+        </member>
+        <member name="M:PdfSharp.Charting.DataLabel.Clone">
+            <summary>
+            Creates a deep copy of this object.
+            </summary>
+        </member>
+        <member name="M:PdfSharp.Charting.DataLabel.DeepCopy">
+            <summary>
+            Implements the deep copy of the object.
+            </summary>
+        </member>
+        <member name="P:PdfSharp.Charting.DataLabel.Format">
+            <summary>
+            Gets or sets a numeric format string for the DataLabel.
+            </summary>
+        </member>
+        <member name="P:PdfSharp.Charting.DataLabel.Font">
+            <summary>
+            Gets the Font for the DataLabel.
+            </summary>
+        </member>
+        <member name="P:PdfSharp.Charting.DataLabel.Position">
+            <summary>
+            Gets or sets the position of the DataLabel.
+            </summary>
+        </member>
+        <member name="P:PdfSharp.Charting.DataLabel.Type">
+            <summary>
+            Gets or sets the type of the DataLabel.
+            </summary>
+        </member>
+        <member name="T:PdfSharp.Charting.Renderers.ColumnDataLabelRenderer">
+            <summary>
+            Represents a data label renderer for column charts.
+            </summary>
+        </member>
+        <member name="T:PdfSharp.Charting.Renderers.DataLabelRenderer">
+            <summary>
+            Represents a data label renderer.
+            </summary>
+        </member>
+        <member name="M:PdfSharp.Charting.Renderers.DataLabelRenderer.#ctor(PdfSharp.Charting.Renderers.RendererParameters)">
+            <summary>
+            Initializes a new instance of the DataLabelRenderer class with the
+            specified renderer parameters.
+            </summary>
+        </member>
+        <member name="M:PdfSharp.Charting.Renderers.DataLabelRenderer.Init">
+            <summary>
+            Creates a data label rendererInfo.
+            Does not return any renderer info.
+            </summary>
+        </member>
+        <member name="M:PdfSharp.Charting.Renderers.DataLabelRenderer.CalcPositions">
+            <summary>
+            Calculates the specific positions for each data label.
+            </summary>
+        </member>
+        <member name="M:PdfSharp.Charting.Renderers.ColumnDataLabelRenderer.#ctor(PdfSharp.Charting.Renderers.RendererParameters)">
+            <summary>
+            Initializes a new instance of the ColumnDataLabelRenderer class with the
+            specified renderer parameters.
+            </summary>
+        </member>
+        <member name="M:PdfSharp.Charting.Renderers.ColumnDataLabelRenderer.Format">
+            <summary>
+            Calculates the space used by the data labels.
+            </summary>
+        </member>
+        <member name="M:PdfSharp.Charting.Renderers.ColumnDataLabelRenderer.Draw">
+            <summary>
+            Draws the data labels of the column chart.
+            </summary>
+        </member>
+        <member name="M:PdfSharp.Charting.Renderers.ColumnDataLabelRenderer.CalcPositions">
+            <summary>
+            Calculates the data label positions specific for column charts.
+            </summary>
+        </member>
+        <member name="T:PdfSharp.Charting.PSCSR">
+            <summary>
+            The Pdf-Sharp-Charting-String-Resources.
+            </summary>
+        </member>
+        <member name="T:PdfSharp.Charting.LineStyle">
+            <summary>
+            Specifies the line style of the LineFormat object.
+            </summary>
+        </member>
+        <member name="F:PdfSharp.Charting.LineStyle.Single">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:PdfSharp.Charting.Renderers.HorizontalStackedYAxisRenderer">
+            <summary>
+            Represents a Y axis renderer used for charts of type BarStacked2D.
+            </summary>
+        </member>
+        <member name="M:PdfSharp.Charting.Renderers.HorizontalStackedYAxisRenderer.#ctor(PdfSharp.Charting.Renderers.RendererParameters)">
+            <summary>
+            Initializes a new instance of the HorizontalStackedYAxisRenderer class with the
+            specified renderer parameters.
+            </summary>
+        </member>
+        <member name="M:PdfSharp.Charting.Renderers.HorizontalStackedYAxisRenderer.CalcYAxis(System.Double@,System.Double@)">
+            <summary>
+            Determines the sum of the smallest and the largest stacked bar
+            from all series of the chart.
+            </summary>
+        </member>
+        <member name="T:PdfSharp.Charting.Renderers.BarGridlinesRenderer">
+            <summary>
+            Represents gridlines used by bar charts, i. e. X axis grid will be rendered
+            from left to right and Y axis grid will be rendered from top to bottom of the plot area.
+            </summary>
+        </member>
+        <member name="M:PdfSharp.Charting.Renderers.BarGridlinesRenderer.#ctor(PdfSharp.Charting.Renderers.RendererParameters)">
+            <summary>
+            Initializes a new instance of the BarGridlinesRenderer class with the
+            specified renderer parameters.
+            </summary>
+        </member>
+        <member name="M:PdfSharp.Charting.Renderers.BarGridlinesRenderer.Draw">
+            <summary>
+            Draws the gridlines into the plot area.
+            </summary>
+        </member>
+        <member name="T:PdfSharp.Charting.Point">
+            <summary>
+            Represents a formatted value on the data series.
+            </summary>
+        </member>
+        <member name="M:PdfSharp.Charting.Point.#ctor">
+            <summary>
+            Initializes a new instance of the Point class.
+            </summary>
+        </member>
+        <member name="M:PdfSharp.Charting.Point.#ctor(System.Double)">
+            <summary>
+            Initializes a new instance of the Point class with a real value.
+            </summary>
+        </member>
+        <member name="M:PdfSharp.Charting.Point.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the Point class with a real value.
+            </summary>
+        </member>
+        <member name="M:PdfSharp.Charting.Point.Clone">
+            <summary>
+            Creates a deep copy of this object.
+            </summary>
+        </member>
+        <member name="M:PdfSharp.Charting.Point.DeepCopy">
+            <summary>
+            Implements the deep copy of the object.
+            </summary>
+        </member>
+        <member name="P:PdfSharp.Charting.Point.LineFormat">
+            <summary>
+            Gets the line format of the data point's border.
+            </summary>
+        </member>
+        <member name="P:PdfSharp.Charting.Point.FillFormat">
+            <summary>
+            Gets the filling format of the data point.
+            </summary>
+        </member>
+        <member name="P:PdfSharp.Charting.Point.Value">
+            <summary>
+            The actual value of the data point.
+            </summary>
+        </member>
+        <member name="T:PdfSharp.Charting.LineFormat">
+            <summary>
+            Defines the format of a line in a shape object.
+            </summary>
+        </member>
+        <member name="M:PdfSharp.Charting.LineFormat.#ctor">
+            <summary>
+            Initializes a new instance of the LineFormat class.
+            </summary>
+        </member>
+        <member name="M:PdfSharp.Charting.LineFormat.#ctor(PdfSharp.Charting.DocumentObject)">
+            <summary>
+            Initializes a new instance of the LineFormat class with the specified parent.
+            </summary>
+        </member>
+        <member name="M:PdfSharp.Charting.LineFormat.Clone">
+            <summary>
+            Creates a deep copy of this object.
+            </summary>
+        </member>
+        <member name="P:PdfSharp.Charting.LineFormat.Visible">
+            <summary>
+            Gets or sets a value indicating whether the line should be visible.
+            </summary>
+        </member>
+        <member name="P:PdfSharp.Charting.LineFormat.Width">
+            <summary>
+            Gets or sets the width of the line in XUnit.
+            </summary>
+        </member>
+        <member name="P:PdfSharp.Charting.LineFormat.Color">
+            <summary>
+            Gets or sets the color of the line.
+            </summary>
+        </member>
+        <member name="P:PdfSharp.Charting.LineFormat.DashStyle">
+            <summary>
+            Gets or sets the dash style of the line.
+            </summary>
+        </member>
+        <member name="P:PdfSharp.Charting.LineFormat.Style">
+            <summary>
+            Gets or sets the style of the line.
+            </summary>
+        </member>
+        <member name="T:PdfSharp.Charting.VerticalAlignment">
+            <summary>
+            Used to determine the vertical alignment of the axis title.
+            </summary>
+        </member>
+        <member name="F:PdfSharp.Charting.VerticalAlignment.Top">
+            <summary>
+            Axis title will be top aligned.
+            </summary>
+        </member>
+        <member name="F:PdfSharp.Charting.VerticalAlignment.Center">
+            <summary>
+            Axis title will be centered.
+            </summary>
+        </member>
+        <member name="F:PdfSharp.Charting.VerticalAlignment.Bottom">
+            <summary>
+            Axis title will be bottom aligned.
+            </summary>
+        </member>
+        <member name="T:PdfSharp.Charting.ChartFrame">
+            <summary>
+            Represents the frame which holds one or more charts.
+            </summary>
+        </member>
+        <member name="M:PdfSharp.Charting.ChartFrame.#ctor">
+            <summary>
+            Initializes a new instance of the ChartFrame class.
+            </summary>
+        </member>
+        <member name="M:PdfSharp.Charting.ChartFrame.#ctor(PdfSharp.Drawing.XRect)">
+            <summary>
+            Initializes a new instance of the ChartFrame class with the specified rectangle.
+            </summary>
+        </member>
+        <member name="M:PdfSharp.Charting.ChartFrame.Add(PdfSharp.Charting.Chart)">
+            <summary>
+            Adds a chart to the ChartFrame.
+            </summary>
+        </member>
+        <member name="M:PdfSharp.Charting.ChartFrame.Draw(PdfSharp.Drawing.XGraphics)">
+            <summary>
+            Draws all charts inside the ChartFrame.
+            </summary>
+        </member>
+        <member name="M:PdfSharp.Charting.ChartFrame.DrawChart(PdfSharp.Drawing.XGraphics)">
+            <summary>
+            Draws first chart only.
+            </summary>
+        </member>
+        <member name="M:PdfSharp.Charting.ChartFrame.GetChartRenderer(PdfSharp.Charting.Chart,PdfSharp.Charting.Renderers.RendererParameters)">
+            <summary>
+            Returns the chart renderer appropriate for the chart.
+            </summary>
+        </member>
+        <member name="F:PdfSharp.Charting.ChartFrame.chartList">
+            <summary>
+            Holds the charts which will be drawn inside the ChartFrame.
+            </summary>
+        </member>
+        <member name="P:PdfSharp.Charting.ChartFrame.Location">
+            <summary>
+            Gets or sets the location of the ChartFrame.
+            </summary>
+        </member>
+        <member name="P:PdfSharp.Charting.ChartFrame.Size">
+            <summary>
+            Gets or sets the size of the ChartFrame.
+            </summary>
+        </member>
+        <member name="T:PdfSharp.Charting.SeriesElements">
+            <summary>
+            Represents the collection of the values in a data series.
+            </summary>
+        </member>
+        <member name="M:PdfSharp.Charting.SeriesElements.#ctor">
+            <summary>
+            Initializes a new instance of the SeriesElements class.
+            </summary>
+        </member>
+        <member name="M:PdfSharp.Charting.SeriesElements.#ctor(PdfSharp.Charting.DocumentObject)">
+            <summary>
+            Initializes a new instance of the SeriesElements class with the specified parent.
+            </summary>
+        </member>
+        <member name="M:PdfSharp.Charting.SeriesElements.Clone">
+            <summary>
+            Creates a deep copy of this object.
+            </summary>
+        </member>
+        <member name="M:PdfSharp.Charting.SeriesElements.AddBlank">
+            <summary>
+            Adds a blank to the series.
+            </summary>
+        </member>
+        <member name="M:PdfSharp.Charting.SeriesElements.Add(System.Double)">
+            <summary>
+            Adds a new point with a real value to the series.
+            </summary>
+        </member>
+        <member name="M:PdfSharp.Charting.SeriesElements.Add(System.Double[])">
+            <summary>
+            Adds an array of new points with real values to the series.
+            </summary>
+        </member>
+        <member name="P:PdfSharp.Charting.SeriesElements.Item(System.Int32)">
+            <summary>
+            Gets a point by it's index.
+            </summary>
+        </member>
+        <member name="T:PdfSharp.Charting.Renderers.Converter">
+            <summary>
+            Provides functions which converts Charting.DOM objects into PdfSharp.Drawing objects.
+            </summary>
+        </member>
+        <member name="M:PdfSharp.Charting.Renderers.Converter.ToXFont(PdfSharp.Charting.Font,PdfSharp.Drawing.XFont)">
+            <summary>
+            Creates a XFont based on the font. Missing attributes will be taken from the defaultFont
+            parameter.
+            </summary>
+        </member>
+        <member name="M:PdfSharp.Charting.Renderers.Converter.ToXPen(PdfSharp.Charting.LineFormat,PdfSharp.Drawing.XColor,System.Double)">
+            <summary>
+            Creates a XPen based on the specified line format. If not specified color and width will be taken
+            from the defaultColor and defaultWidth parameter.
+            </summary>
+        </member>
+        <member name="M:PdfSharp.Charting.Renderers.Converter.ToXPen(PdfSharp.Charting.LineFormat,PdfSharp.Drawing.XPen)">
+            <summary>
+            Creates a XPen based on the specified line format. If not specified color and width will be taken
+            from the defaultPen parameter.
+            </summary>
+        </member>
+        <member name="M:PdfSharp.Charting.Renderers.Converter.ToXPen(PdfSharp.Charting.LineFormat,PdfSharp.Drawing.XColor,System.Double,PdfSharp.Drawing.XDashStyle)">
+            <summary>
+            Creates a XPen based on the specified line format. If not specified color, width and dash style
+            will be taken from the defaultColor, defaultWidth and defaultDashStyle parameters.
+            </summary>
+        </member>
+        <member name="M:PdfSharp.Charting.Renderers.Converter.ToXBrush(PdfSharp.Charting.FillFormat,PdfSharp.Drawing.XColor)">
+            <summary>
+            Creates a XBrush based on the specified fill format. If not specified, color will be taken
+            from the defaultColor parameter.
+            </summary>
+        </member>
+        <member name="M:PdfSharp.Charting.Renderers.Converter.ToXBrush(PdfSharp.Charting.Font,PdfSharp.Drawing.XColor)">
+            <summary>
+            Creates a XBrush based on the specified font color. If not specified, color will be taken
+            from the defaultColor parameter.
+            </summary>
+        </member>
+        <member name="T:PdfSharp.Charting.DataLabelPosition">
+            <summary>
+            Determines where the data label will be positioned.
+            </summary>
+        </member>
+        <member name="F:PdfSharp.Charting.DataLabelPosition.Center">
+            <summary>
+            DataLabel will be centered inside the bar or pie.
+            </summary>
+        </member>
+        <member name="F:PdfSharp.Charting.DataLabelPosition.InsideBase">
+            <summary>
+            Inside the bar or pie at the origin.
+            </summary>
+        </member>
+        <member name="F:PdfSharp.Charting.DataLabelPosition.InsideEnd">
+            <summary>
+            Inside the bar or pie at the edge.
+            </summary>
+        </member>
+        <member name="F:PdfSharp.Charting.DataLabelPosition.OutsideEnd">
+            <summary>
+            Outside the bar or pie.
+            </summary>
+        </member>
+        <member name="T:PdfSharp.Charting.HorizontalAlignment">
+            <summary>
+            Used to determine the horizontal alignment of the axis title.
+            </summary>
+        </member>
+        <member name="F:PdfSharp.Charting.HorizontalAlignment.Left">
+            <summary>
+            Axis title will be left aligned.
+            </summary>
+        </member>
+        <member name="F:PdfSharp.Charting.HorizontalAlignment.Right">
+            <summary>
+            Axis title will be right aligned.
+            </summary>
+        </member>
+        <member name="F:PdfSharp.Charting.HorizontalAlignment.Center">
+            <summary>
+            Axis title will be centered.
+            </summary>
+        </member>
+        <member name="T:PdfSharp.Charting.Renderers.VerticalXAxisRenderer">
+            <summary>
+            Represents an axis renderer used for charts of type Bar2D.
+            </summary>
+        </member>
+        <member name="M:PdfSharp.Charting.Renderers.VerticalXAxisRenderer.#ctor(PdfSharp.Charting.Renderers.RendererParameters)">
+            <summary>
+            Initializes a new instance of the VerticalXAxisRenderer class with the specified renderer parameters.
+            </summary>
+        </member>
+        <member name="M:PdfSharp.Charting.Renderers.VerticalXAxisRenderer.Init">
+            <summary>
+            Returns an initialized rendererInfo based on the X axis.
+            </summary>
+        </member>
+        <member name="M:PdfSharp.Charting.Renderers.VerticalXAxisRenderer.Format">
+            <summary>
+            Calculates the space used for the X axis.
+            </summary>
+        </member>
+        <member name="M:PdfSharp.Charting.Renderers.VerticalXAxisRenderer.Draw">
+            <summary>
+            Draws the horizontal X axis.
+            </summary>
+        </member>
+        <member name="M:PdfSharp.Charting.Renderers.VerticalXAxisRenderer.CalculateXAxisValues(PdfSharp.Charting.Renderers.AxisRendererInfo)">
+            <summary>
+            Calculates the X axis describing values like minimum/maximum scale, major/minor tick and
+            major/minor tick mark width.
+            </summary>
+        </member>
+        <member name="M:PdfSharp.Charting.Renderers.VerticalXAxisRenderer.InitXValues(PdfSharp.Charting.Renderers.AxisRendererInfo)">
+            <summary>
+            Initializes the rendererInfo's xvalues. If not set by the user xvalues will be simply numbers
+            from minimum scale + 1 to maximum scale.
+            </summary>
+        </member>
+        <member name="M:PdfSharp.Charting.Renderers.VerticalXAxisRenderer.GetTickMarkPos(PdfSharp.Charting.Renderers.AxisRendererInfo,System.Double@,System.Double@,System.Double@,System.Double@)">
+            <summary>
+            Calculates the starting and ending y position for the minor and major tick marks.
+            </summary>
+        </member>
+        <member name="T:PdfSharp.Charting.Renderers.PieExplodedPlotAreaRenderer">
+            <summary>
+            Represents a exploded pie plot area renderer.
+            </summary>
+        </member>
+        <member name="M:PdfSharp.Charting.Renderers.PieExplodedPlotAreaRenderer.#ctor(PdfSharp.Charting.Renderers.RendererParameters)">
+            <summary>
+            Initializes a new instance of the PieExplodedPlotAreaRenderer class
+            with the specified renderer parameters.
+            </summary>
+        </member>
+        <member name="M:PdfSharp.Charting.Renderers.PieExplodedPlotAreaRenderer.CalcSectors">
+            <summary>
+            Calculate angles for each sector.
+            </summary>
+        </member>
+        <member name="T:PdfSharp.Charting.Renderers.PieDataLabelRenderer">
+            <summary>
+            Represents a data label renderer for pie charts.
+            </summary>
+        </member>
+        <member name="M:PdfSharp.Charting.Renderers.PieDataLabelRenderer.#ctor(PdfSharp.Charting.Renderers.RendererParameters)">
+            <summary>
+            Initializes a new instance of the PieDataLabelRenderer class with the
+            specified renderer parameters.
+            </summary>
+        </member>
+        <member name="M:PdfSharp.Charting.Renderers.PieDataLabelRenderer.Format">
+            <summary>
+            Calculates the space used by the data labels.
+            </summary>
+        </member>
+        <member name="M:PdfSharp.Charting.Renderers.PieDataLabelRenderer.Draw">
+            <summary>
+            Draws the data labels of the pie chart.
+            </summary>
+        </member>
+        <member name="M:PdfSharp.Charting.Renderers.PieDataLabelRenderer.CalcPositions">
+            <summary>
+            Calculates the data label positions specific for pie charts.
+            </summary>
+        </member>
+        <member name="T:PdfSharp.Charting.Renderers.BarDataLabelRenderer">
+            <summary>
+            Represents a data label renderer for bar charts.
+            </summary>
+        </member>
+        <member name="M:PdfSharp.Charting.Renderers.BarDataLabelRenderer.#ctor(PdfSharp.Charting.Renderers.RendererParameters)">
+            <summary>
+            Initializes a new instance of the BarDataLabelRenderer class with the
+            specified renderer parameters.
+            </summary>
+        </member>
+        <member name="M:PdfSharp.Charting.Renderers.BarDataLabelRenderer.Format">
+            <summary>
+            Calculates the space used by the data labels.
+            </summary>
+        </member>
+        <member name="M:PdfSharp.Charting.Renderers.BarDataLabelRenderer.Draw">
+            <summary>
+            Draws the data labels of the bar chart.
+            </summary>
+        </member>
+        <member name="M:PdfSharp.Charting.Renderers.BarDataLabelRenderer.CalcPositions">
+            <summary>
+            Calculates the data label positions specific for column charts.
+            </summary>
+        </member>
+        <member name="T:PdfSharp.Charting.Renderers.AxisTitleRenderer">
+            <summary>
+            Represents a axis title renderer used for x and y axis titles.
+            </summary>
+        </member>
+        <member name="M:PdfSharp.Charting.Renderers.AxisTitleRenderer.#ctor(PdfSharp.Charting.Renderers.RendererParameters)">
+            <summary>
+            Initializes a new instance of the AxisTitleRenderer class with the
+            specified renderer parameters.
+            </summary>
+        </member>
+        <member name="M:PdfSharp.Charting.Renderers.AxisTitleRenderer.Format">
+            <summary>
+            Calculates the space used for the axis title.
+            </summary>
+        </member>
+        <member name="M:PdfSharp.Charting.Renderers.AxisTitleRenderer.Draw">
+            <summary>
+            Draws the axis title.
+            </summary>
+        </member>
+    </members>
+</doc>

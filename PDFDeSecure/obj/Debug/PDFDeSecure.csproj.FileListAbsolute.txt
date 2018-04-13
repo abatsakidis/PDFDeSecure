@@ -1,0 +1,16 @@
+C:\Users\mantis\Documents\Visual Studio 2017\Projects\PDFDeSecure\PDFDeSecure\bin\Debug\PDFDeSecure.exe.config
+C:\Users\mantis\Documents\Visual Studio 2017\Projects\PDFDeSecure\PDFDeSecure\bin\Debug\PDFDeSecure.exe
+C:\Users\mantis\Documents\Visual Studio 2017\Projects\PDFDeSecure\PDFDeSecure\bin\Debug\PDFDeSecure.pdb
+C:\Users\mantis\Documents\Visual Studio 2017\Projects\PDFDeSecure\PDFDeSecure\bin\Debug\PdfSharp.Charting.dll
+C:\Users\mantis\Documents\Visual Studio 2017\Projects\PDFDeSecure\PDFDeSecure\bin\Debug\PdfSharp.dll
+C:\Users\mantis\Documents\Visual Studio 2017\Projects\PDFDeSecure\PDFDeSecure\bin\Debug\PdfSharp.xml
+C:\Users\mantis\Documents\Visual Studio 2017\Projects\PDFDeSecure\PDFDeSecure\bin\Debug\PdfSharp.Charting.xml
+C:\Users\mantis\Documents\Visual Studio 2017\Projects\PDFDeSecure\PDFDeSecure\bin\Debug\de\PdfSharp.resources.dll
+C:\Users\mantis\Documents\Visual Studio 2017\Projects\PDFDeSecure\PDFDeSecure\bin\Debug\de\PdfSharp.Charting.resources.dll
+C:\Users\mantis\Documents\Visual Studio 2017\Projects\PDFDeSecure\PDFDeSecure\obj\Debug\PDFDeSecure.csprojResolveAssemblyReference.cache
+C:\Users\mantis\Documents\Visual Studio 2017\Projects\PDFDeSecure\PDFDeSecure\obj\Debug\PDFDeSecure.Properties.Resources.resources
+C:\Users\mantis\Documents\Visual Studio 2017\Projects\PDFDeSecure\PDFDeSecure\obj\Debug\PDFDeSecure.csproj.GenerateResource.Cache
+C:\Users\mantis\Documents\Visual Studio 2017\Projects\PDFDeSecure\PDFDeSecure\obj\Debug\PDFDeSecure.csproj.CoreCompileInputs.cache
+C:\Users\mantis\Documents\Visual Studio 2017\Projects\PDFDeSecure\PDFDeSecure\obj\Debug\PDFDeSecure.exe
+C:\Users\mantis\Documents\Visual Studio 2017\Projects\PDFDeSecure\PDFDeSecure\obj\Debug\PDFDeSecure.pdb
+C:\Users\mantis\Documents\Visual Studio 2017\Projects\PDFDeSecure\PDFDeSecure\obj\Debug\PDFDeSecure.PDFDeSecure.resources
