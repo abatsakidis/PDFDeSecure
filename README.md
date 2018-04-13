@@ -1,4 +1,5 @@
 [![Build status](https://ci.appveyor.com/api/projects/status/qoan7ibgh7vcd74r?svg=true)](https://ci.appveyor.com/project/abatsakidis/pdfdesecure)
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/d5c89f5248f94747857def735b9699ea)](https://www.codacy.com/app/a.batsakidis/PDFDeSecure?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=abatsakidis/PDFDeSecure&amp;utm_campaig
 
 ## Description ##
 
