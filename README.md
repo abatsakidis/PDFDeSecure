@@ -1,3 +1,5 @@
+[![Build status](https://ci.appveyor.com/api/projects/status/qoan7ibgh7vcd74r?svg=true)](https://ci.appveyor.com/project/abatsakidis/pdfdesecure)
+
 ## Description ##
 
 An easy-to-use PDF Unlocker. Remove copy-protection from PDF files. 
