@@ -27,8 +27,7 @@ namespace PDFDeSecure
                 var aryFi = di.GetFiles("*.pdf");
                 foreach (FileInfo fi in aryFi)
                 {
-                    PdfDocument pdf = new PdfDocument();
-                    PdfDocument outpdf = new PdfDocument(); 
+                    outpdf = new PdfDocument(); 
                     pdf = PdfReader.Open(fi.OpenRead(), PdfDocumentOpenMode.Import);
                     foreach (PdfPage page in pdf.Pages)
                     {
