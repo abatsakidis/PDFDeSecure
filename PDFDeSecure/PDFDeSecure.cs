@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 using System.Windows.Forms;
 using PdfSharp.Pdf;
 using PdfSharp.Pdf.IO;
@@ -15,6 +16,27 @@ namespace PDFDeSecure
         public PDFDeSecure()
         {
             InitializeComponent();
+            var Args = Environment.GetCommandLineArgs();
+            if (Args.Length > 2)
+            {
+                //Auto Processing Mode
+                //First Argu Is INPUT Dir, Second Is OUTPUT Dir
+                var Input = Args[1];
+                var Output = Args[2];
+                DirectoryInfo di = new DirectoryInfo(Input);
+                var aryFi = di.GetFiles("*.pdf");
+                foreach (FileInfo fi in aryFi)
+                {
+                    outpdf = new PdfDocument(); 
+                    pdf = PdfReader.Open(fi.OpenRead(), PdfDocumentOpenMode.Import);
+                    foreach (PdfPage page in pdf.Pages)
+                    {
+                        outpdf.AddPage(page);
+                    }
+                    outpdf.Save(new FileInfo(Output+"\\"+fi.Name).OpenWrite(), true);
+                }
+                Environment.Exit(0);
+            }
         }
 
        
