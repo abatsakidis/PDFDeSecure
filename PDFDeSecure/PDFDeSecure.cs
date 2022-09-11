@@ -25,16 +25,28 @@ namespace PDFDeSecure
                 var Output = Args[2];
                 DirectoryInfo di = new DirectoryInfo(Input);
                 var aryFi = di.GetFiles("*.pdf");
+                var counter = 0;
+                var error = 0;
                 foreach (FileInfo fi in aryFi)
                 {
-                    outpdf = new PdfDocument(); 
-                    pdf = PdfReader.Open(fi.OpenRead(), PdfDocumentOpenMode.Import);
-                    foreach (PdfPage page in pdf.Pages)
-                    {
-                        outpdf.AddPage(page);
+                    //Skip file with errors
+                    try { 
+                        outpdf = new PdfDocument(); 
+                        pdf = PdfReader.Open(fi.OpenRead(), PdfDocumentOpenMode.Import);
+                        foreach (PdfPage page in pdf.Pages)
+                        {
+                            outpdf.AddPage(page);
+                            }
+                        outpdf.Save(new FileInfo(Output+"\\"+fi.Name).OpenWrite(), true);
+                        counter++;
                     }
-                    outpdf.Save(new FileInfo(Output+"\\"+fi.Name).OpenWrite(), true);
+                    catch(Exception ex)
+                    {
+                        error++;
+                        File.WriteAllText(Output + "\\Error-" + fi.Name + ".log", ex.ToString());
+                    }
                 }
+                MessageBox.Show("Unlocked " + counter + " files" + Environment.NewLine + "Failed " + error + " files" + Environment.NewLine + "Percentage " + counter + "/" + (counter + error) + " = " + ((float)counter/ (float)(counter + error) * 100).ToString("f2") + "%, Cheers!", "PDF file Unlocked! and Saved!" , MessageBoxButtons.OK, MessageBoxIcon.Information);
                 Environment.Exit(0);
             }
         }
