@@ -1,5 +1,6 @@
 ﻿using System;
 using System.IO;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 using PdfSharp.Pdf;
 using PdfSharp.Pdf.IO;
@@ -16,43 +17,10 @@ namespace PDFDeSecure
         public PDFDeSecure()
         {
             InitializeComponent();
-            var Args = Environment.GetCommandLineArgs();
-            if (Args.Length > 2)
-            {
-                //Auto Processing Mode
-                //First Argu Is INPUT Dir, Second Is OUTPUT Dir
-                var Input = Args[1];
-                var Output = Args[2];
-                DirectoryInfo di = new DirectoryInfo(Input);
-                var aryFi = di.GetFiles("*.pdf");
-                var counter = 0;
-                var error = 0;
-                foreach (FileInfo fi in aryFi)
-                {
-                    //Skip file with errors
-                    try { 
-                        outpdf = new PdfDocument(); 
-                        pdf = PdfReader.Open(fi.OpenRead(), PdfDocumentOpenMode.Import);
-                        foreach (PdfPage page in pdf.Pages)
-                        {
-                            outpdf.AddPage(page);
-                            }
-                        outpdf.Save(new FileInfo(Output+"\\"+fi.Name).OpenWrite(), true);
-                        counter++;
-                    }
-                    catch(Exception ex)
-                    {
-                        error++;
-                        File.WriteAllText(Output + "\\Error-" + fi.Name + ".log", ex.ToString());
-                    }
-                }
-                MessageBox.Show("Unlocked " + counter + " files" + Environment.NewLine + "Failed " + error + " files" + Environment.NewLine + "Percentage " + counter + "/" + (counter + error) + " = " + ((float)counter/ (float)(counter + error) * 100).ToString("f2") + "%, Cheers!", "PDF file Unlocked! and Saved!" , MessageBoxButtons.OK, MessageBoxIcon.Information);
-                Environment.Exit(0);
-            }
         }
 
        
-        private void btnbrowse_Click(object sender, EventArgs e)
+        private async void btnbrowse_Click(object sender, EventArgs e)
         {
             OpenFileDialog openFileDialog1 = new OpenFileDialog();
 
@@ -64,19 +32,32 @@ namespace PDFDeSecure
             if (openFileDialog1.ShowDialog() == DialogResult.OK)
             {
                 pdffile.Text = openFileDialog1.FileName.ToString();
-
-                pdf = PdfReader.Open(openFileDialog1.OpenFile(), PdfDocumentOpenMode.Import);
-
-                foreach (PdfPage page in pdf.Pages)
+                btnunlock.Enabled = false; 
+                btnbrowse.Enabled = false;
+                progressBar1.Value = 0;
+                var progress = new Progress<int>(report => progressBar1.Value = report);
+                btnunlock.Text = "Processing...";
+                await Task.Run(() =>
                 {
-                    outpdf.AddPage(page);
-                }
-
+                    Stream fileStream = openFileDialog1.OpenFile();
+                    pdf = PdfReader.Open(fileStream, PdfDocumentOpenMode.Import);
+                    int current = 0;
+                    foreach (PdfPage page in pdf.Pages)
+                    {
+                        outpdf.AddPage(page);
+                        current++;
+                        IProgress<int> iprog = progress;
+                        iprog.Report(current*100/pdf.PageCount);
+                    }
+                    fileStream.Close();
+                });
                 btnunlock.Enabled = true;
+                btnbrowse.Enabled = true;
+                btnunlock.Text = "Unlock PDF";
             }
         }
 
-        private void btnunlock_Click(object sender, EventArgs e)
+        private async void btnunlock_Click(object sender, EventArgs e)
         {
 
             SaveFileDialog SaveFileDialog1 = new SaveFileDialog();
@@ -88,8 +69,17 @@ namespace PDFDeSecure
 
             if (saveFileDialog1.ShowDialog() == DialogResult.OK)
             {
-                outpdf.Save(saveFileDialog1.OpenFile(), true);
+                btnunlock.Text = "Saving...";
+                btnunlock.Enabled = false;
+                await Task.Run(() =>
+                {
+                    outpdf.Save(saveFileDialog1.OpenFile(), true);
+                    outpdf.Dispose();
+                    pdf.Dispose();
+                });
                 MessageBox.Show("PDF file Unlocked! and Saved!","Unlocked & Saved", MessageBoxButtons.OK,MessageBoxIcon.Information);
+                pdffile.Text = "";
+                btnunlock.Text = "Unlock PDF";
             }
         }
     }

@@ -29,94 +29,102 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PDFDeSecure));
-            this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
-            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
-            this.btnbrowse = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.pdffile = new System.Windows.Forms.Label();
-            this.btnunlock = new System.Windows.Forms.Button();
-            this.SuspendLayout();
+            saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
+            openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            btnbrowse = new System.Windows.Forms.Button();
+            label1 = new System.Windows.Forms.Label();
+            label2 = new System.Windows.Forms.Label();
+            pdffile = new System.Windows.Forms.Label();
+            btnunlock = new System.Windows.Forms.Button();
+            progressBar1 = new System.Windows.Forms.ProgressBar();
+            SuspendLayout();
             // 
             // openFileDialog1
             // 
-            this.openFileDialog1.FileName = "openFileDialog1";
+            openFileDialog1.FileName = "openFileDialog1";
             // 
             // btnbrowse
             // 
-            this.btnbrowse.Location = new System.Drawing.Point(337, 37);
-            this.btnbrowse.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
-            this.btnbrowse.Name = "btnbrowse";
-            this.btnbrowse.Size = new System.Drawing.Size(188, 53);
-            this.btnbrowse.TabIndex = 0;
-            this.btnbrowse.Text = "Browse";
-            this.btnbrowse.UseVisualStyleBackColor = true;
-            this.btnbrowse.Click += new System.EventHandler(this.btnbrowse_Click);
+            btnbrowse.Location = new System.Drawing.Point(225, 31);
+            btnbrowse.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
+            btnbrowse.Name = "btnbrowse";
+            btnbrowse.Size = new System.Drawing.Size(125, 44);
+            btnbrowse.TabIndex = 0;
+            btnbrowse.Text = "Browse";
+            btnbrowse.UseVisualStyleBackColor = true;
+            btnbrowse.Click += btnbrowse_Click;
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(32, 48);
-            this.label1.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(253, 30);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Select PDF File ";
+            label1.AutoSize = true;
+            label1.Location = new System.Drawing.Point(21, 40);
+            label1.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            label1.Name = "label1";
+            label1.Size = new System.Drawing.Size(131, 25);
+            label1.TabIndex = 1;
+            label1.Text = "Select PDF File ";
             // 
             // label2
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(30, 120);
-            this.label2.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(283, 30);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "Selected PDF file:";
+            label2.AutoSize = true;
+            label2.Location = new System.Drawing.Point(20, 100);
+            label2.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            label2.Name = "label2";
+            label2.Size = new System.Drawing.Size(147, 25);
+            label2.TabIndex = 2;
+            label2.Text = "Selected PDF file:";
             // 
             // pdffile
             // 
-            this.pdffile.AutoSize = true;
-            this.pdffile.Location = new System.Drawing.Point(275, 120);
-            this.pdffile.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
-            this.pdffile.Name = "pdffile";
-            this.pdffile.Size = new System.Drawing.Size(0, 30);
-            this.pdffile.TabIndex = 3;
+            pdffile.AutoSize = true;
+            pdffile.Location = new System.Drawing.Point(183, 100);
+            pdffile.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            pdffile.Name = "pdffile";
+            pdffile.Size = new System.Drawing.Size(0, 25);
+            pdffile.TabIndex = 3;
             // 
             // btnunlock
             // 
-            this.btnunlock.BackColor = System.Drawing.Color.DarkRed;
-            this.btnunlock.Enabled = false;
-            this.btnunlock.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnunlock.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnunlock.Location = new System.Drawing.Point(798, 155);
-            this.btnunlock.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
-            this.btnunlock.Name = "btnunlock";
-            this.btnunlock.Size = new System.Drawing.Size(212, 69);
-            this.btnunlock.TabIndex = 4;
-            this.btnunlock.Text = "Unlock PDF";
-            this.btnunlock.UseVisualStyleBackColor = false;
-            this.btnunlock.Click += new System.EventHandler(this.btnunlock_Click);
+            btnunlock.BackColor = System.Drawing.Color.DarkRed;
+            btnunlock.Enabled = false;
+            btnunlock.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            btnunlock.ForeColor = System.Drawing.SystemColors.Control;
+            btnunlock.Location = new System.Drawing.Point(538, 100);
+            btnunlock.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
+            btnunlock.Name = "btnunlock";
+            btnunlock.Size = new System.Drawing.Size(141, 58);
+            btnunlock.TabIndex = 4;
+            btnunlock.Text = "Unlock PDF";
+            btnunlock.UseVisualStyleBackColor = false;
+            btnunlock.Click += btnunlock_Click;
+            // 
+            // progressBar1
+            // 
+            progressBar1.Location = new System.Drawing.Point(20, 180);
+            progressBar1.Name = "progressBar1";
+            progressBar1.Size = new System.Drawing.Size(661, 10);
+            progressBar1.TabIndex = 5;
             // 
             // PDFDeSecure
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(15F, 30F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1040, 242);
-            this.Controls.Add(this.btnunlock);
-            this.Controls.Add(this.pdffile);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.btnbrowse);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
-            this.MaximizeBox = false;
-            this.Name = "PDFDeSecure";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "PDFDeSecure";
-            this.ResumeLayout(false);
-            this.PerformLayout();
-
+            AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
+            AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            ClientSize = new System.Drawing.Size(693, 202);
+            Controls.Add(progressBar1);
+            Controls.Add(btnunlock);
+            Controls.Add(pdffile);
+            Controls.Add(label2);
+            Controls.Add(label1);
+            Controls.Add(btnbrowse);
+            FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            Icon = (System.Drawing.Icon)resources.GetObject("$this.Icon");
+            Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
+            MaximizeBox = false;
+            Name = "PDFDeSecure";
+            StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            Text = "PDFDeSecure";
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
@@ -128,6 +136,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label pdffile;
         private System.Windows.Forms.Button btnunlock;
+        private System.Windows.Forms.ProgressBar progressBar1;
     }
 }
 
