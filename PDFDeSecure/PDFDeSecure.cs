@@ -31,14 +31,18 @@ namespace PDFDeSecure
                 {
                     //Skip file with errors
                     try { 
-                        outpdf = new PdfDocument(); 
-                        pdf = PdfReader.Open(fi.OpenRead(), PdfDocumentOpenMode.Import);
+                        outpdf = new PdfDocument();
+                        Stream fileStream = fi.OpenRead();
+                        pdf = PdfReader.Open(fileStream, PdfDocumentOpenMode.Import);
                         foreach (PdfPage page in pdf.Pages)
                         {
                             outpdf.AddPage(page);
                             }
                         outpdf.Save(new FileInfo(Output+"\\"+fi.Name).OpenWrite(), true);
                         counter++;
+                        pdf.Dispose();
+                        fileStream.Close();
+                        outpdf.Dispose();
                     }
                     catch(Exception ex)
                     {
@@ -64,8 +68,8 @@ namespace PDFDeSecure
             if (openFileDialog1.ShowDialog() == DialogResult.OK)
             {
                 pdffile.Text = openFileDialog1.FileName.ToString();
-
-                pdf = PdfReader.Open(openFileDialog1.OpenFile(), PdfDocumentOpenMode.Import);
+                Stream fileStream = openFileDialog1.OpenFile();
+                pdf = PdfReader.Open(fileStream, PdfDocumentOpenMode.Import);
 
                 foreach (PdfPage page in pdf.Pages)
                 {
@@ -73,6 +77,7 @@ namespace PDFDeSecure
                 }
 
                 btnunlock.Enabled = true;
+                fileStream.Close();
             }
         }
 
@@ -89,7 +94,11 @@ namespace PDFDeSecure
             if (saveFileDialog1.ShowDialog() == DialogResult.OK)
             {
                 outpdf.Save(saveFileDialog1.OpenFile(), true);
+                outpdf.Dispose();
+                pdf.Dispose();
                 MessageBox.Show("PDF file Unlocked! and Saved!","Unlocked & Saved", MessageBoxButtons.OK,MessageBoxIcon.Information);
+                pdffile.Text = "";
+                btnunlock.Enabled = false;
             }
         }
     }
