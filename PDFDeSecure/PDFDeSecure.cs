@@ -10,9 +10,9 @@ namespace PDFDeSecure
     public partial class PDFDeSecure : Form
     {
 
-        PdfDocument pdf = new PdfDocument();
+        PdfDocument pdf;
 
-        PdfDocument outpdf = new PdfDocument();
+        PdfDocument outpdf;
 
         public PDFDeSecure()
         {
@@ -39,6 +39,7 @@ namespace PDFDeSecure
                 btnunlock.Text = "Processing...";
                 await Task.Run(() =>
                 {
+                    outpdf = new PdfDocument();
                     Stream fileStream = openFileDialog1.OpenFile();
                     pdf = PdfReader.Open(fileStream, PdfDocumentOpenMode.Import);
                     int current = 0;
