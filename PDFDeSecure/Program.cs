@@ -17,6 +17,7 @@ namespace PDFDeSecure
         [STAThread]
         static void Main()
         {
+            Application.SetHighDpiMode(HighDpiMode.PerMonitorV2);
             var Args = Environment.GetCommandLineArgs();
             if (Args.Length > 2)
             {
