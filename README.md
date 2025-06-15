@@ -3,31 +3,67 @@
 
 [![Stargazers repo roster for @abatsakidis/PDFDeSecure](https://reporoster.com/stars/dark/abatsakidis/PDFDeSecure)](https://github.com/abatsakidis/PDFDeSecure/stargazers)
 
-## Description ##
+# 🛡️ PDFDeSecure
 
-An easy-to-use PDF Unlocker. Remove copy-protection from PDF files. 
+**PDFDeSecure** is a free, open-source tool to remove restrictions from PDF files (e.g. printing, editing, copying), especially when DRM-like protections are applied.
 
-## How To ##
+> 📂 Unlock your PDFs from "secured" printing mode in seconds.
 
-* Select your PDF Protected File (Browse).
-* Click 'Unlock' button and Save the Un-Protected PDF File. 
+---
 
-![Alt text](/Screenshot/screen.jpg?raw=true "MD5 Bruter")
+## ✨ Features
 
-<br>
+- ✅ Removes PDF security restrictions (print/copy/edit)
+- 💡 No need to know the password (if only usage rights are locked)
+- 🔐 Works on Adobe LiveCycle DRM-protected PDFs
+- 🖥️ CLI support and optional UI
+- ⚡ Fast and lightweight — built with C#/.NET
+- 💻 Cross-platform via .NET (Windows, Linux, macOS*)
 
-## Tested on ##
+---
 
-**OS**: Windows 10 x86_64 <br>
-**CPU**: Intel 2 Quad Q6600 (4) @ 2.400GHz <br>
-**Memory**: 4085MiB <br>
+## 🚀 Getting Started
 
-## Build ##
+### 📦 Download
 
-* Use Visual Studio 2017<br>
-* Open application's solution file (PDFDeSecure.sln)<br>
+Grab the latest release from the [Releases page](https://github.com/abatsakidis/pdfdesecure/releases).
 
-## Author ##
+Or clone the repo and build it yourself:
 
-Batsakidis Athanasios<br>
-a.batsakidis@re-think.gr
+```bash
+git clone https://github.com/abatsakidis/pdfdesecure.git
+cd pdfdesecure
+dotnet build
+```
+
+### 🖱️ Usage
+
+```bash
+PDFDeSecure.exe input.pdf output.pdf
+```
+
+That’s it! Your output PDF will be unrestricted.
+
+### 📚 How it Works
+
+PDFDeSecure bypasses usage restrictions by re-rendering the document as a new PDF, preserving layout and content while discarding the security flags.
+
+⚠️ It does not attempt to crack password-encrypted PDFs (e.g. owner/user password protected).
+
+##🤝 Contributing
+
+Pull requests are welcome! If you’d like to:
+
+    Report a bug ➡️ Open an issue
+
+    Suggest a feature ➡️ Start a discussion
+
+    Help improve UI or compatibility ➡️ Fork and send a PR
+
+Please see CONTRIBUTING.md for details.
+
+## 📄 License
+
+## MIT License © Anastasios Batsakidis
+
+    This tool is provided for educational and legal personal use only. Do not use it on documents you do not own or have rights to modify.
