@@ -64,6 +64,6 @@ Please see CONTRIBUTING.md for details.
 
 ## 📄 License
 
-## MIT License © Anastasios Batsakidis
+## MIT License © Athanasios Batsakidis
 
     This tool is provided for educational and legal personal use only. Do not use it on documents you do not own or have rights to modify.
